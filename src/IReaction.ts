@@ -1,8 +1,8 @@
-import { React } from "./Reactions/React";
+import { Reaction } from "./Reactions/Reaction";
 
 export interface IReaction<Payloads = any, EventID = any, AggregateID = any, CreatedBy = any> {
   scope: string;
   type: string;
   name: string;
-  react: React<Payloads, EventID, AggregateID, CreatedBy>;
+  react: Reaction<Payloads, EventID, AggregateID, CreatedBy>;
 }

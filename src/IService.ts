@@ -9,5 +9,5 @@ export interface IService {
   name: () => string;
   configs: () => IServiceConfigs;
   dispatch: (command: ICommand, listener?: StateQueryStreamListener) => DispatchResultType;
-  query: (query: IQuery, listener?: StateQueryStreamListener) => QueryResultType;
+  query: (query: IQuery, listener: StateQueryStreamListener) => QueryResultType;
 }

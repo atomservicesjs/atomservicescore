@@ -1,1 +1,1 @@
-export { React } from "./React";
+export { Reaction } from "./Reaction";
