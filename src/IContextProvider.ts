@@ -1,7 +1,6 @@
 import { IIdentifier } from "./IIdentifier";
-import { IServiceContext } from "./IServiceContext";
+import { IServiceBootstrapable } from "./Services/IServiceBootstrapable";
 
-export interface IContextProvider<AggregateID = any, EventID = any, QueryID = any> {
+export interface IContextProvider<AggregateID = any, EventID = any, QueryID = any> extends IServiceBootstrapable {
   identifier: () => IIdentifier;
-  provide: (type: string, scope?: string) => IServiceContext;
 }

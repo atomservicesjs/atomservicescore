@@ -6,6 +6,8 @@ export {
   IUnhandledDispatchResult,
 } from "./DispatchResultType";
 
+export { IServiceBootstrapable } from "./IServiceBootstrapable";
+
 export {
   ISuccessAsyncQueryResult,
   ISuccessSyncQueryResult,
