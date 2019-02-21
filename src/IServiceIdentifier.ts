@@ -1,5 +1,4 @@
-export interface IServiceIdentifier<AggregateID = any, EventID = any, QueryID = any> {
+export interface IServiceIdentifier<AggregateID = any, EventID = any> {
   newAggregateID: () => AggregateID;
   newEventID: () => EventID;
-  newQueryID: () => QueryID;
 }

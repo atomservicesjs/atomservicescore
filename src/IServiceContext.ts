@@ -11,5 +11,5 @@ export interface IServiceContext extends
   IStateQueryStream {
   scope: () => string;
   type: () => string;
-  level: (eventName: string) => EventLevel;
+  level: (name: string) => EventLevel;
 }
