@@ -31,6 +31,7 @@ export { IQuery } from "./IQuery";
 export { IQueryHandler } from "./IQueryHandler";
 export { IReaction } from "./IReaction";
 export { IService } from "./IService";
+export { IServiceConfigs } from "./IServiceConfigs";
 export { IServiceContext } from "./IServiceContext";
 export { IServiceEventQueryable } from "./IServiceEventQueryable";
 export { IServiceEventStream } from "./IServiceEventStream";
