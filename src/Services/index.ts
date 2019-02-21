@@ -9,8 +9,9 @@ export {
 export { IServiceBootstrapable } from "./IServiceBootstrapable";
 
 export {
-  ISuccessAsyncQueryResult,
-  ISuccessSyncQueryResult,
+  IAcceptQueryResult,
+  IInvalidQueryResult,
   IUnhandledQueryResult,
   QueryResultType,
+  QueryStatus,
 } from "./QueryResultType";

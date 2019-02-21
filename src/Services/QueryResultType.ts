@@ -1,22 +1,25 @@
-import { StateQueryResultStatus } from "../StateQueryResultStatus";
+export type QueryStatus = "accepted" | "invalid" | "unhandled";
 
-export interface ISuccessAsyncQueryResult<RefType = any> {
-  status: StateQueryResultStatus;
-  ref: RefType;
+export interface IAcceptQueryResult {
+  accept: boolean;
+  status: QueryStatus;
+  ref: any;
 }
 
-export interface ISuccessSyncQueryResult {
-  status: StateQueryResultStatus;
-  ref: string;
-  state: any;
+export interface IInvalidQueryResult {
+  accept: boolean;
+  status: QueryStatus;
+  invalidAttributes: any;
 }
 
 export interface IUnhandledQueryResult {
-  status: StateQueryResultStatus;
+  accept: boolean;
+  status: QueryStatus;
+  type: string;
   name: string;
 }
 
 export type QueryResultType =
-  ISuccessAsyncQueryResult |
-  ISuccessSyncQueryResult |
+  IAcceptQueryResult |
+  IInvalidQueryResult |
   IUnhandledQueryResult;
