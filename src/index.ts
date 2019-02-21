@@ -28,6 +28,7 @@ export { IEventStream } from "./IEventStream";
 export { IIdentifier } from "./IIdentifier";
 export { INotifiable } from "./INotifiable";
 export { IQuery } from "./IQuery";
+export { IQueryable } from "./IQueryable";
 export { IQueryHandler } from "./IQueryHandler";
 export { IReaction } from "./IReaction";
 export { IService } from "./IService";
