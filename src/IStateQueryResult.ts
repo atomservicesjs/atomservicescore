@@ -1,10 +1,11 @@
-import { StateQueryResultStatus } from "./StateQueryResultStatus";
+import { StateQueryAction } from "./StateQueryAction";
+import { StateQueryStatus } from "./StateQueryStatus";
 
 export interface IStateQueryResult<State = any> {
   _ref: string;
-  status: StateQueryResultStatus;
+  status: StateQueryStatus;
   origin: {
-    action: "process" | "query";
+    action: StateQueryAction;
     scope: string;
     type: string;
     name: string;
