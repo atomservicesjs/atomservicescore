@@ -7,9 +7,6 @@ export interface IServiceEventQueryable<EventID = any, AggregateID = any, Create
     Promise<{ type: string; aggregateID: AggregateID; version: number; }>;
   queryEventsByAggregateID: <Payloads = any>(
     aggregateID: AggregateID,
-    options?: {
-      initialVersion?: number;
-      limit?: number;
-    },
+    options?: { initialVersion?: number; limit?: number; },
   ) => Promise<Array<IEvent<Payloads, EventID, AggregateID, CreatedBy>>>;
 }

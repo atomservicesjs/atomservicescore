@@ -40,7 +40,6 @@ export { IServiceEventStream } from "./IServiceEventStream";
 export { IServiceIdentifier } from "./IServiceIdentifier";
 export { IStateBase } from "./IStateBase";
 export { IStateQueryResult } from "./IStateQueryResult";
-export { IStateQueryStream } from "./IStateQueryStream";
 export { StateQueryAction } from "./StateQueryAction";
+export { StateQueryResultListener } from "./StateQueryResultListener";
 export { StateQueryStatus } from "./StateQueryStatus";
-export { StateQueryStreamListener } from "./StateQueryStreamListener";

@@ -1,15 +1,15 @@
 import { StateQueryAction } from "./StateQueryAction";
 import { StateQueryStatus } from "./StateQueryStatus";
 
-export interface IStateQueryResult<State = any> {
+export interface IStateQueryResult<StateType = any, ErrorType = Error> {
   _ref: string;
   status: StateQueryStatus;
   origin: {
     action: StateQueryAction;
-    scope: string;
-    type: string;
     name: string;
+    type: string;
+    scope: string;
   };
-  state?: State;
-  error?: Error;
+  state?: StateType;
+  error?: ErrorType;
 }

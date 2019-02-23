@@ -1,9 +1,8 @@
-import { IEvent } from "../IEvent";
 import { EventLevel } from "./EventLevel";
-import { SubscribeAckFunc } from "./SubscribeAckFunc";
+import { EventProcess } from "./EventProcess";
 
 export type EventSubscribing = (
   on: { name: string; type: string; scope: string; level: EventLevel; },
   to: { type: string; scope: string; },
-  process: (event: IEvent, ack: SubscribeAckFunc) => void,
+  process: EventProcess,
 ) => void;
