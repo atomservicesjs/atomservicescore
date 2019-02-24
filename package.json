@@ -1,6 +1,6 @@
 {
   "name": "atomservicescore",
-  "version": "0.3.0-alpha.2",
+  "version": "0.3.0-alpha.3",
   "description": "AtomServices Core Library Providing Definitions",
   "main": "./lib/index.js",
   "typings": "./typings/index.d.ts",
@@ -32,15 +32,15 @@
   "devDependencies": {
     "@types/chai": "^4.1.7",
     "@types/mocha": "^5.2.6",
-    "@types/node": "^11.9.4",
+    "@types/node": "^11.9.5",
     "@types/sinon": "^7.0.6",
     "chai": "^4.2.0",
-    "mocha": "^5.2.0",
+    "mocha": "^6.0.1",
     "mock-require": "^3.0.3",
     "nyc": "^13.3.0",
     "shelljs": "^0.8.3",
-    "sinon": "^7.2.3",
-    "tslint": "^5.12.1",
+    "sinon": "^7.2.4",
+    "tslint": "^5.13.0",
     "typescript": "^3.3.3"
   }
 }
