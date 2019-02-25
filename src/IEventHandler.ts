@@ -1,9 +1,23 @@
-import { EventProcess } from "./Events/EventProcess";
-import { EventProcessEffect } from "./Events/EventProcessEffect";
+import { IEvent } from "./IEvent";
+import { IServiceContext } from "./IServiceContext";
 import { IStateBase } from "./IStateBase";
 
-export interface IEventHandler<State extends IStateBase = any, Payloads = any> {
+export interface IEventHandler<
+  State extends IStateBase = any,
+  Payloads = any,
+  EventID = any,
+  AggregateID = any,
+  CreatedBy = any,
+  > {
   name: string;
-  process: EventProcess<State, Payloads>;
-  processEffect?: EventProcessEffect<State, Payloads>;
+  process: (initState: State, event: IEvent<Payloads, EventID, AggregateID, CreatedBy>) => State;
+  processEffect: (
+    resources: {
+      event: IEvent<Payloads, EventID, AggregateID, CreatedBy>;
+      state: State;
+      initState: State;
+    },
+    resulting: (event: IEvent, result: any) => void,
+    context?: IServiceContext,
+  ) => Promise<void>;
 }

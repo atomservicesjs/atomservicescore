@@ -1,8 +1,8 @@
-import { Querying } from "./Queries/Querying";
-import { QueryValidate } from "./Queries/QueryValidate";
+import { IValidationResultType } from "./common/IValidationResultType";
+import { IQuery } from "./IQuery";
 
 export interface IQueryHandler<Payloads = any, QueryResult = any> {
   name: string;
-  validate: QueryValidate<Payloads>;
-  query: Querying<Payloads, QueryResult>;
+  validate: (payloads: Payloads) => IValidationResultType;
+  query: (query: IQuery<Payloads>) => Promise<QueryResult>;
 }

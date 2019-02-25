@@ -1,18 +1,18 @@
-import * as Commands from "./Commands";
+import * as CommandComponents from "./CommandComponents";
 import * as Core from "./Core";
-import * as Events from "./Events";
+import * as EventComponents from "./EventComponents";
 import * as EventStreams from "./EventStreams";
-import * as Queries from "./Queries";
-import * as Reactions from "./Reactions";
+import * as QueryComponents from "./QueryComponents";
+import * as ReactionComponents from "./ReactionComponents";
 import * as Services from "./Services";
 
 export {
-  Commands,
+  CommandComponents,
   Core,
-  Events,
+  EventComponents,
   EventStreams,
-  Queries,
-  Reactions,
+  QueryComponents,
+  ReactionComponents,
   Services,
 };
 

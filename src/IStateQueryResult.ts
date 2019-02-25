@@ -1,7 +1,7 @@
 import { StateQueryAction } from "./StateQueryAction";
 import { StateQueryStatus } from "./StateQueryStatus";
 
-export interface IStateQueryResult<StateType = any, ErrorType = Error> {
+export interface IStateQueryResult<Result = any, ERROR = Error> {
   _ref: string;
   status: StateQueryStatus;
   origin: {
@@ -10,6 +10,6 @@ export interface IStateQueryResult<StateType = any, ErrorType = Error> {
     type: string;
     scope: string;
   };
-  state?: StateType;
-  error?: ErrorType;
+  result?: Result;
+  error?: ERROR;
 }

@@ -14,6 +14,6 @@ export type EventProcessEffect<
       state: State;
       initState: State;
     },
-    processResult: (event: IEvent, result: any) => void,
+    resulting: (event: IEvent, result: any) => void,
     context?: IServiceContext,
   ) => Promise<void>;
