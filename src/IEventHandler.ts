@@ -1,9 +1,10 @@
+import { IAnyState } from "./IAnyState";
 import { IEvent } from "./IEvent";
 import { IServiceContext } from "./IServiceContext";
 import { IStateBase } from "./IStateBase";
 
 export interface IEventHandler<
-  State extends IStateBase = any,
+  State extends IStateBase = IAnyState,
   Payloads = any,
   EventID = any,
   AggregateID = any,
