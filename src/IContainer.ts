@@ -6,6 +6,6 @@ export interface IContainer extends IServiceBootstrapable {
   name(): string;
   configs(): IContainerConfigs;
   registerService(service: IService): void;
-  service(): IService[];
   service(name: string): IService | undefined;
+  services(): IService[];
 }
