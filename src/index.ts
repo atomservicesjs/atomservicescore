@@ -1,19 +1,21 @@
-import * as CommandComponents from "./CommandComponents";
+import * as CommandHandlers from "./CommandHandlers";
 import * as Core from "./Core";
-import * as EventComponents from "./EventComponents";
+import * as EventHandlers from "./EventHandlers";
 import * as EventStreams from "./EventStreams";
-import * as QueryComponents from "./QueryComponents";
-import * as ReactionComponents from "./ReactionComponents";
+import * as QueryHandlers from "./QueryHandlers";
+import * as Reactions from "./Reactions";
 import * as Services from "./Services";
+import * as StateQuery from "./StateQuery";
 
 export {
-  CommandComponents,
+  CommandHandlers,
   Core,
-  EventComponents,
+  EventHandlers,
   EventStreams,
-  QueryComponents,
-  ReactionComponents,
+  QueryHandlers,
+  Reactions,
   Services,
+  StateQuery,
 };
 
 export { ICommand } from "./ICommand";
@@ -40,6 +42,4 @@ export { IServiceEventStream } from "./IServiceEventStream";
 export { IServiceIdentifier } from "./IServiceIdentifier";
 export { IStateBase } from "./IStateBase";
 export { IStateQueryResult } from "./IStateQueryResult";
-export { StateQueryAction } from "./StateQueryAction";
 export { StateQueryResultListener } from "./StateQueryResultListener";
-export { StateQueryStatus } from "./StateQueryStatus";

@@ -1,5 +1,5 @@
-import { StateQueryAction } from "./StateQueryAction";
-import { StateQueryStatus } from "./StateQueryStatus";
+import { StateQueryAction } from "./StateQuery/StateQueryAction";
+import { StateQueryStatus } from "./StateQuery/StateQueryStatus";
 
 export interface IStateQueryResult<Result = any, ERROR = Error> {
   _ref: string;
