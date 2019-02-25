@@ -18,6 +18,7 @@ export {
   StateQuery,
 };
 
+export { IAnyState } from "./IAnyState";
 export { ICommand } from "./ICommand";
 export { ICommandHandler } from "./ICommandHandler";
 export { IContainer } from "./IContainer";

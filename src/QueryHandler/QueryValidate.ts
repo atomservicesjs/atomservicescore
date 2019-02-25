@@ -1,3 +1,3 @@
 import { IValidationResultType } from "../common/IValidationResultType";
 
-export type QueryValidate<Payloads> = (payloads: Payloads) => IValidationResultType;
+export type QueryValidate<Payloads = any> = (payloads: Payloads) => IValidationResultType;

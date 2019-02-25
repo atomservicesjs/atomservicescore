@@ -1,8 +1,8 @@
-export interface IStateBase {
+export interface IStateBase<StateID = any, CreatedBy = any, UpdatedBy = any> {
   _createdAt: Date;
-  _createdBy: any;
-  _id: any;
+  _createdBy: CreatedBy;
+  _id: StateID;
   _updatedAt: Date;
-  _updatedBy: any;
+  _updatedBy: UpdatedBy;
   _version: number;
 }
