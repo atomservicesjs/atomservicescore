@@ -1,19 +1,19 @@
-import * as CommandHandlers from "./CommandHandlers";
+import * as CommandHandler from "./CommandHandler";
 import * as Core from "./Core";
-import * as EventHandlers from "./EventHandlers";
+import * as EventHandler from "./EventHandler";
 import * as EventStreams from "./EventStreams";
-import * as QueryHandlers from "./QueryHandlers";
-import * as Reactions from "./Reactions";
+import * as QueryHandler from "./QueryHandler";
+import * as Reaction from "./Reaction";
 import * as Services from "./Services";
 import * as StateQuery from "./StateQuery";
 
 export {
-  CommandHandlers,
+  CommandHandler,
   Core,
-  EventHandlers,
+  EventHandler,
   EventStreams,
-  QueryHandlers,
-  Reactions,
+  QueryHandler,
+  Reaction,
   Services,
   StateQuery,
 };
