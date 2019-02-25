@@ -3,9 +3,10 @@ import { IService } from "./IService";
 import { IServiceBootstrapable } from "./Services/IServiceBootstrapable";
 
 export interface IContainer extends IServiceBootstrapable {
-  name(): string;
-  configs(): IContainerConfigs;
-  registerService(service: IService): void;
-  service(name: string): IService | undefined;
-  services(): IService[];
+  name: () => string;
+  configs: () => IContainerConfigs;
+  registerService: (service: IService) => void;
+  service: (name: string) => IService | undefined;
+  services: () => IService[];
+  serviceNames: () => string[];
 }
