@@ -1,3 +1,4 @@
+export { EventChannel } from "./EventChannel";
 export { EventLevel } from "./EventLevel";
 export { EventProcess } from "./EventProcess";
 export { EventProcessAck } from "./EventProcessAck";
