@@ -1,5 +1,9 @@
-import { EventPublishing } from "./EventPublishing";
+import { IEvent } from "../IEvent";
+import { EventLevel } from "./EventLevel";
 
 export interface IEventPublishing {
-  publish: EventPublishing;
+  publish: (
+    event: IEvent,
+    options: { scope: string; level: EventLevel; },
+  ) => Promise<void>;
 }

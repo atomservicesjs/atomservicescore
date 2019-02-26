@@ -2,8 +2,6 @@ export { EventChannel } from "./EventChannel";
 export { EventLevel } from "./EventLevel";
 export { EventProcess } from "./EventProcess";
 export { EventProcessAck } from "./EventProcessAck";
-export { EventPublishing } from "./EventPublishing";
-export { EventSubscribing } from "./EventSubscribing";
 export { IDirectEventStream } from "./IDirectEventStream";
 export { IEventPublishing } from "./IEventPublishing";
 export { IEventSubscribing } from "./IEventSubscribing";
