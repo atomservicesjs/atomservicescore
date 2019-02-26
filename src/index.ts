@@ -1,6 +1,6 @@
 import * as CommandHandler from "./CommandHandler";
 import * as common from "./common";
-import * as Core from "./Core";
+import * as core from "./core";
 import * as EventHandler from "./EventHandler";
 import * as EventStreams from "./EventStreams";
 import * as QueryHandler from "./QueryHandler";
@@ -11,7 +11,7 @@ import * as StateQuery from "./StateQuery";
 export {
   CommandHandler,
   common,
-  Core,
+  core,
   EventHandler,
   EventStreams,
   QueryHandler,
