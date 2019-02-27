@@ -3,7 +3,7 @@ export type DispatchStatus = "accepted" | "invalid" | "unhandled";
 export interface IAcceptDispatchResult {
   accept: boolean;
   status: DispatchStatus;
-  ref: any;
+  ref: string;
 }
 
 export interface IInvalidDispatchResult {

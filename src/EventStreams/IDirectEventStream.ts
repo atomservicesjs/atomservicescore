@@ -1,4 +1,5 @@
-export interface IDirectEventStream<RefType = any> {
-  directTo: (ref: RefType, data: any) => Promise<void>;
-  listenTo: (ref: RefType, listener: (data: any) => void) => Promise<void>;
+
+export interface IDirectEventStream {
+  directTo: (ref: string, data: any) => Promise<void>;
+  listenTo: (ref: string, listener: (data: any) => void) => Promise<void>;
 }

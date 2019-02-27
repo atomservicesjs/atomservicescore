@@ -3,7 +3,7 @@ export type QueryStatus = "accepted" | "invalid" | "unhandled";
 export interface IAcceptQueryResult {
   accept: boolean;
   status: QueryStatus;
-  ref: any;
+  ref: string;
 }
 
 export interface IInvalidQueryResult {
