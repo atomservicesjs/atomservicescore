@@ -4,6 +4,7 @@ export interface IServiceAsSubscribers {
   asSubscribers: Array<{
     scope: string;
     type: string;
+    level: string;
     name: string;
   }>;
 }
