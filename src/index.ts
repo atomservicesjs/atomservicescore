@@ -43,5 +43,4 @@ export { IServiceEventStream } from "./IServiceEventStream";
 export { IServiceIdentifier } from "./IServiceIdentifier";
 export { IStateBase } from "./IStateBase";
 export { IStateQueryResult } from "./IStateQueryResult";
-export { ServiceBootstrap } from "./ServiceBootstrap";
 export { StateQueryResultListener } from "./StateQueryResultListener";

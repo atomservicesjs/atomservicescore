@@ -6,7 +6,9 @@ export {
   IUnhandledDispatchResult,
 } from "./DispatchResultType";
 
+export { IServiceAsSubscribers } from "./IServiceAsSubscribers";
 export { IServiceBootstrapable } from "./IServiceBootstrapable";
+export { IServiceDescription } from "./IServiceDescription";
 
 export {
   IAcceptQueryResult,
@@ -15,3 +17,5 @@ export {
   QueryResultType,
   QueryStatus,
 } from "./QueryResultType";
+
+export { ServiceBootstrap } from "./ServiceBootstrap";
