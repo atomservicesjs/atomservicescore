@@ -16,6 +16,6 @@ export interface IEventStores<EventID = any, AggregateID = any, CreatedBy = any>
     },
   ) => Promise<Array<IEvent<Payloads, EventID, AggregateID, CreatedBy>>>;
   storeEvent: <Payloads = any>(event: IEvent<Payloads, EventID, AggregateID, CreatedBy>, scope: string) =>
-    Promise<boolean>;
+    Promise<string>;
   [key: string]: any;
 }
