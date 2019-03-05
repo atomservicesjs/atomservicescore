@@ -2,7 +2,7 @@ import { EventLevel } from "../EventStreams/EventLevel";
 
 export interface IServiceDescription {
   scope: string;
-  service: string;
+  type: string;
   commands: string[];
   handlers: Array<{
     level: EventLevel;

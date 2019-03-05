@@ -1,6 +1,6 @@
 export interface IServiceAsSubscribers {
   scope: string;
-  service: string;
+  type: string;
   asSubscribers: Array<{
     scope: string;
     type: string;
