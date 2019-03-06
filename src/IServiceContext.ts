@@ -3,10 +3,10 @@ import { IServiceEventQueryable } from "./IServiceEventQueryable";
 import { IServiceEventStream } from "./IServiceEventStream";
 import { IServiceIdentifier } from "./IServiceIdentifier";
 
-export interface IServiceContext extends
-  IServiceEventQueryable,
+export interface IServiceContext<AggregateID = any, EventID = any, CreatedBy = any> extends
+  IServiceEventQueryable<AggregateID, EventID, CreatedBy>,
   IServiceEventStream,
-  IServiceIdentifier {
+  IServiceIdentifier<AggregateID, EventID> {
   scope: () => string;
   type: () => string;
   level: (name: string) => EventLevel;

@@ -7,7 +7,6 @@ export {
 } from "./DispatchResultType";
 
 export { IServiceAsSubscribers } from "./IServiceAsSubscribers";
-export { IServiceBootstrapable } from "./IServiceBootstrapable";
 export { IServiceDescription } from "./IServiceDescription";
 
 export {

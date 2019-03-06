@@ -1,11 +1,10 @@
 import { IContainerConfigs } from "./IContainerConfigs";
 import { IService } from "./IService";
-import { IServiceBootstrapable } from "./Services/IServiceBootstrapable";
 
-export interface IContainer extends IServiceBootstrapable {
+export interface IContainer {
   name: () => string;
   configs: () => IContainerConfigs;
-  registerService: (service: IService) => void;
+  bootService: (service: IService) => void;
   service: (name: string) => IService | undefined;
   services: () => IService[];
   serviceNames: () => string[];

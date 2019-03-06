@@ -1,6 +1,6 @@
 import { IEvent } from "./IEvent";
 
-export interface IServiceEventQueryable<EventID = any, AggregateID = any, CreatedBy = any> {
+export interface IServiceEventQueryable<AggregateID = any, EventID = any, CreatedBy = any> {
   queryByID: <Payloads = any>(eventID: EventID) =>
     Promise<IEvent<Payloads, EventID, AggregateID, CreatedBy>> | Promise<undefined>;
   queryCurrentVersion: (aggregateID: AggregateID) =>
