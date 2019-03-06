@@ -14,5 +14,5 @@ export interface IService {
   asSubscribers: () => IServiceAsSubscribers;
   dispatch: (command: ICommand, listener?: StateQueryResultListener) => DispatchResultType;
   query: (query: IQuery, listener: StateQueryResultListener) => QueryResultType;
-  hash: () => string;
+  hash: (container?: string) => string;
 }

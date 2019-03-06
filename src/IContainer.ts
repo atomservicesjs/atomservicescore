@@ -8,4 +8,5 @@ export interface IContainer {
   bootstrap: (bootstraper: ServiceBootstrap) => Promise<void>;
   service: (name: string) => IService | undefined;
   serviceNames: () => string[];
+  hash: () => string;
 }
