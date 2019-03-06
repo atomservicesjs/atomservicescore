@@ -18,3 +18,4 @@ export {
 } from "./QueryResultType";
 
 export { ServiceBootstrap } from "./ServiceBootstrap";
+export { ServiceHash } from "./ServiceHash";
