@@ -13,7 +13,7 @@ export interface IContainer {
   bootstrap: (bootstraper: ServiceBootstrap) => Promise<void>;
   dispatch: (type: string, command: ICommand, listener?: StateQueryResultListener) => DispatchResultType;
   query: (type: string, query: IQuery, listener: StateQueryResultListener) => QueryResultType;
-  service: (name: string) => IService | undefined;
+  service: (type: string) => IService | undefined;
   serviceNames: () => string[];
   hash: () => string;
 }
