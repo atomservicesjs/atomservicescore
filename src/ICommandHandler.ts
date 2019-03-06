@@ -13,6 +13,6 @@ export interface ICommandHandler<
   name: string;
   validate: (payloads: CommandPayloads) =>
     IValidationResultType;
-  transform: (command: ICommand<CommandPayloads, CreatedBy>, type: string, identifier?: IServiceIdentifier) =>
+  transform: (command: ICommand<CommandPayloads, CreatedBy>, type: string, identifier: IServiceIdentifier) =>
     IEvent<EventPayloads, EventID, AggregateID, CreatedBy>;
 }
