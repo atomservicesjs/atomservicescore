@@ -1,6 +1,6 @@
 import { ICommand } from "../ICommand";
 import { IEvent } from "../IEvent";
-import { IServiceIdentifier } from "../IServiceIdentifier";
+import { IServiceContext } from "../IServiceContext";
 
 export type CommandTransform<Command extends ICommand = ICommand, Event extends IEvent = IEvent> =
-  (command: Command, type: string, identifier: IServiceIdentifier) => Event;
+  (command: Command, context: IServiceContext) => Event;
