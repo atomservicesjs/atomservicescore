@@ -1,7 +1,8 @@
-export interface ICommand<Payloads = any, CreatedBy = any> {
+import { IAtomCommand } from "./IAtomCommand";
+
+export interface ICommand<Payloads = any, CreatedBy = any> extends IAtomCommand {
   name: string;
   payloads: Payloads;
   _version: number;
-  _createdAt: Date;
   _createdBy: CreatedBy;
 }

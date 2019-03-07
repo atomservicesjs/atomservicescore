@@ -1,18 +1,13 @@
 import { IValidationResultType } from "./common/IValidationResultType";
-import { ICommand } from "./ICommand";
-import { IEvent } from "./IEvent";
+import { IAtomCommand } from "./IAtomCommand";
+import { IAtomEvent } from "./IAtomEvent";
 import { IServiceIdentifier } from "./IServiceIdentifier";
 
 export interface ICommandHandler<
-  CommandPayloads = any,
-  EventPayloads = any,
-  EventID = any,
-  AggregateID = any,
-  CreatedBy = any,
+  Command extends IAtomCommand = IAtomCommand,
+  Event extends IAtomEvent = IAtomEvent,
   > {
   name: string;
-  validate: (payloads: CommandPayloads) =>
-    IValidationResultType;
-  transform: (command: ICommand<CommandPayloads, CreatedBy>, type: string, identifier: IServiceIdentifier) =>
-    IEvent<EventPayloads, EventID, AggregateID, CreatedBy>;
+  validate: (command: Command) => IValidationResultType;
+  transform: (command: Command, type: string, identifier: IServiceIdentifier) => Event;
 }

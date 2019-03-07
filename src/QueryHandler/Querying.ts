@@ -1,3 +1,3 @@
-import { IQuery } from "../IQuery";
+import { IAtomQuery } from "../IAtomQuery";
 
-export type Querying<Payloads = any, QueryResult = any> = (query: IQuery<Payloads>) => Promise<QueryResult>;
+export type Querying<QueryResult = any> = (query: IAtomQuery) => Promise<QueryResult>;

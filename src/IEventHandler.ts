@@ -1,24 +1,21 @@
 import { IAnyState } from "./IAnyState";
-import { IEvent } from "./IEvent";
+import { IAtomEvent } from "./IAtomEvent";
 import { IServiceContext } from "./IServiceContext";
 import { IStateBase } from "./IStateBase";
 
 export interface IEventHandler<
   State extends IStateBase = IAnyState,
-  Payloads = any,
-  EventID = any,
-  AggregateID = any,
-  CreatedBy = any,
+  Event extends IAtomEvent = IAtomEvent,
   > {
   name: string;
-  process: (initState: State, event: IEvent<Payloads, EventID, AggregateID, CreatedBy>) => State;
+  process: (initState: State, event: Event) => State;
   processEffect: (
     resources: {
-      event: IEvent<Payloads, EventID, AggregateID, CreatedBy>;
+      event: Event;
       state: State;
       initState: State;
     },
-    resulting: (event: IEvent, result: any) => void,
+    resulting: (event: Event, result: any) => void,
     context?: IServiceContext,
   ) => Promise<void>;
 }

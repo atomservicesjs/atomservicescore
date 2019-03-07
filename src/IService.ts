@@ -1,5 +1,5 @@
-import { ICommand } from "./ICommand";
-import { IQuery } from "./IQuery";
+import { IAtomCommand } from "./IAtomCommand";
+import { IAtomQuery } from "./IAtomQuery";
 import { IServiceConfigs } from "./IServiceConfigs";
 import { DispatchResultType } from "./Services/DispatchResultType";
 import { IServiceAsSubscribers } from "./Services/IServiceAsSubscribers";
@@ -12,7 +12,7 @@ export interface IService {
   configs: () => IServiceConfigs;
   description: () => IServiceDescription;
   asSubscribers: () => IServiceAsSubscribers;
-  dispatch: (command: ICommand, listener?: StateQueryResultListener) => DispatchResultType;
-  query: (query: IQuery, listener: StateQueryResultListener) => QueryResultType;
+  dispatch: (command: IAtomCommand, listener?: StateQueryResultListener) => DispatchResultType;
+  query: (query: IAtomQuery, listener: StateQueryResultListener) => QueryResultType;
   hash: (container?: string) => string;
 }
