@@ -1,12 +1,12 @@
-import { IEvent } from "./IEvent";
+import { IAtomEvent } from "./IAtomEvent";
 
 export interface IServiceEventQueryable<AggregateID = any, EventID = any, CreatedBy = any> {
-  queryByID: <Payloads = any>(eventID: EventID) =>
-    Promise<IEvent<Payloads, EventID, AggregateID, CreatedBy>> | Promise<undefined>;
+  queryByID: (eventID: EventID) =>
+    Promise<IAtomEvent> | Promise<undefined>;
   queryCurrentVersion: (aggregateID: AggregateID) =>
     Promise<{ type: string; aggregateID: AggregateID; version: number; }>;
   queryEventsByAggregateID: <Payloads = any>(
     aggregateID: AggregateID,
     options?: { initialVersion?: number; limit?: number; },
-  ) => Promise<Array<IEvent<Payloads, EventID, AggregateID, CreatedBy>>>;
+  ) => Promise<IAtomEvent[]>;
 }

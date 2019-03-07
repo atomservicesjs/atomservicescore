@@ -1,11 +1,8 @@
 import { IAnyState } from "../IAnyState";
-import { IEvent } from "../IEvent";
+import { IAtomEvent } from "../IAtomEvent";
 import { IStateBase } from "../IStateBase";
 
 export type EventProcess<
   State extends IStateBase = IAnyState,
-  Payloads = any,
-  EventID = any,
-  AggregateID = any,
-  CreatedBy = any,
-  > = (initState: State, event: IEvent<Payloads, EventID, AggregateID, CreatedBy>) => State;
+  Event extends IAtomEvent = IAtomEvent,
+  > = (initState: State, event: Event) => State;
