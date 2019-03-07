@@ -1,4 +1,4 @@
 import { IValidationResultType } from "../common/IValidationResultType";
-import { IAtomCommand } from "../IAtomCommand";
+import { ICommand } from "../ICommand";
 
-export type CommandValidate<Command extends IAtomCommand = IAtomCommand> = (command: Command) => IValidationResultType;
+export type CommandValidate<Command extends ICommand = ICommand> = (command: Command) => IValidationResultType;

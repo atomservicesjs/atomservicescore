@@ -1,7 +1,7 @@
 import { IValidationResultType } from "./common/IValidationResultType";
-import { IAtomQuery } from "./IAtomQuery";
+import { IQuery } from "./IQuery";
 
-export interface IQueryHandler<Query extends IAtomQuery = IAtomQuery, QueryResult = any> {
+export interface IQueryHandler<Query extends IQuery = IQuery, QueryResult = any> {
   name: string;
   validate: (query: Query) => IValidationResultType;
   query: (query: Query) => Promise<QueryResult>;

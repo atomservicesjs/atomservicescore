@@ -1,4 +1,4 @@
-export interface IQuery<Payloads = any> {
+export interface IQuery {
   name: string;
-  payloads: Payloads;
+  [key: string]: any;
 }

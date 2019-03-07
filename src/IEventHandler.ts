@@ -1,12 +1,9 @@
 import { IAnyState } from "./IAnyState";
-import { IAtomEvent } from "./IAtomEvent";
+import { IEvent } from "./IEvent";
 import { IServiceContext } from "./IServiceContext";
 import { IStateBase } from "./IStateBase";
 
-export interface IEventHandler<
-  State extends IStateBase = IAnyState,
-  Event extends IAtomEvent = IAtomEvent,
-  > {
+export interface IEventHandler<State extends IStateBase = IAnyState, Event extends IEvent = IEvent> {
   name: string;
   process: (initState: State, event: Event) => State;
   processEffect: (

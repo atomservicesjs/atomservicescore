@@ -24,6 +24,7 @@ export { IAnyState } from "./IAnyState";
 export { IAtomCommand } from "./IAtomCommand";
 export { IAtomEvent } from "./IAtomEvent";
 export { IAtomQuery } from "./IAtomQuery";
+export { IAtomState } from "./IAtomState";
 export { ICommand } from "./ICommand";
 export { ICommandHandler } from "./ICommandHandler";
 export { IContainer } from "./IContainer";
