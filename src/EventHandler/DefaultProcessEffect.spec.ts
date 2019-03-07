@@ -1,9 +1,9 @@
 import { expect } from "chai";
 import * as sinon from "sinon";
-import { DefaultEventProcessEffect } from "./DefaultEventProcessEffect";
+import { DefaultProcessEffect } from "./DefaultProcessEffect";
 
-describe("DefaultEventProcessEffect.ts tests", () => {
-  describe("#DefaultEventProcessEffect()", () => {
+describe("DefaultProcessEffect.ts tests", () => {
+  describe("#DefaultProcessEffect()", () => {
     it("expect to call resulting with event and state", async () => {
       // arranges
       const event: any = {};
@@ -12,7 +12,7 @@ describe("DefaultEventProcessEffect.ts tests", () => {
       const resulting = sinon.spy();
 
       // acts
-      await DefaultEventProcessEffect({ event, initState, state }, resulting);
+      await DefaultProcessEffect({ event, initState, state }, resulting);
 
       // asserts
       expect(resulting.calledWith(event, state)).to.equal(true);
