@@ -5,7 +5,8 @@
   ],
   "jsRules": {},
   "rules": {
-    "no-empty": [true, "allow-empty-functions"]
+    "no-empty": [true, "allow-empty-functions"],
+    "max-line-length": [true, 180]
   },
   "rulesDirectory": []
 }
