@@ -7,5 +7,5 @@ export interface IEventSubscribing {
     on: { name: string; type: string; scope: string; level: EventLevel; },
     to: { channel: EventChannel; type: string; scope: string; },
     process: (event: IEvent, processAck: () => void) => Promise<void>,
-  ) => Promise<void>;
+  ) => Promise<{ name: string; type: string; scope: string; level: EventLevel; }>;
 }

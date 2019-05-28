@@ -4,6 +4,6 @@ import { EventLevel } from "./EventLevel";
 export interface IEventPublishing {
   publish: (
     event: IEvent,
-    on: { name: string; type: string; scope: string; level: EventLevel; },
-  ) => Promise<void>;
+    on: { scope: string; level: EventLevel; },
+  ) => Promise<{ name: string; type: string; scope: string; level: EventLevel; }>;
 }
