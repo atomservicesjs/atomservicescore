@@ -44,7 +44,6 @@ export { IReaction } from "./IReaction";
 export { IService } from "./IService";
 export { IServiceConfigs } from "./IServiceConfigs";
 export { IServiceContext } from "./IServiceContext";
-export { IServiceEventQueryable } from "./IServiceEventQueryable";
 export { IServiceEventStream } from "./IServiceEventStream";
 export { IServiceIdentifier } from "./IServiceIdentifier";
 export { IStateBase } from "./IStateBase";
