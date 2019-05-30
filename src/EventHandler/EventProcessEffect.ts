@@ -7,8 +7,7 @@ export type EventProcessEffect<State extends IStateBase = IAnyState, Event exten
   resources: {
     event: Event;
     state: State;
-    initState: State;
   },
-  resulting: (event: Event, result: any) => void,
+  resulting: (event: Event, result: any) => Promise<any>,
   context?: IServiceContext,
 ) => Promise<void>;
