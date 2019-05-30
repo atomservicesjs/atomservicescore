@@ -5,7 +5,7 @@ import { IStateBase } from "./IStateBase";
 
 export interface IEventHandler<State extends IStateBase = IAnyState, Event extends IEvent = IEvent> {
   name: string;
-  process: (event: Event) => State;
+  process: (event: Event) => Promise<State>;
   processEffect: (
     resources: {
       event: Event;
