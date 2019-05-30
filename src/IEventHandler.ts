@@ -1,17 +1,15 @@
-import { IAnyState } from "./IAnyState";
 import { IEvent } from "./IEvent";
 import { IServiceContext } from "./IServiceContext";
-import { IStateBase } from "./IStateBase";
 
-export interface IEventHandler<State extends IStateBase = IAnyState, Event extends IEvent = IEvent> {
+export interface IEventHandler<Event extends IEvent = IEvent, ProcessResult = any> {
   name: string;
-  process: (event: Event) => Promise<State>;
+  process: (event: Event) => Promise<ProcessResult>;
   processEffect: (
-    resources: {
+    process: {
       event: Event;
-      state: State;
+      result: ProcessResult;
     },
-    resulting: (event: Event, result: any) => Promise<any>,
+    resulting: (event: Event, resulting: any) => Promise<any>,
     context?: IServiceContext,
   ) => Promise<void>;
 }

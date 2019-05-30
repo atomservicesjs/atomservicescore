@@ -7,14 +7,14 @@ describe("DefaultProcessEffect.ts tests", () => {
     it("expect to call resulting with event and state", async () => {
       // arranges
       const event: any = {};
-      const state: any = {};
+      const result: any = {};
       const resulting = sinon.spy();
 
       // acts
-      await DefaultProcessEffect({ event, state }, resulting);
+      await DefaultProcessEffect({ event, result }, resulting);
 
       // asserts
-      expect(resulting.calledWith(event, state)).to.equal(true);
+      expect(resulting.calledWith(event, result)).to.equal(true);
     });
   });
 });
