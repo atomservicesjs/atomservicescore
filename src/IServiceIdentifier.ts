@@ -1,5 +1,5 @@
 export interface IServiceIdentifier<AggregateID = any, EventID = any> {
-  newAggregateID: () => AggregateID;
-  newEventID: () => EventID;
   type: () => string;
+  AggregateID: () => AggregateID;
+  EventID: () => EventID;
 }

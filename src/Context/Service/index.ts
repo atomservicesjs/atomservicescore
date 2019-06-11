@@ -1,1 +1,0 @@
-export { IServiceIdentifier } from "./IServiceIdentifier";
