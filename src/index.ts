@@ -1,11 +1,13 @@
 import * as CommandHandler from "./CommandHandler";
 import * as EventHandler from "./EventHandler";
 import * as EventStream from "./EventStream";
+import * as Reaction from "./Reaction";
 
 export {
   CommandHandler,
   EventHandler,
   EventStream,
+  Reaction,
 };
 
 export { DispatchResult, IValidationResultType } from "./common";
