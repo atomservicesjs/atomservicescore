@@ -1,14 +1,14 @@
-import { EventProcess } from "./EventHandler/EventProcess";
-import { EventProcessEffect } from "./EventHandler/EventProcessEffect";
+import { HandlerProcess } from "./EventHandler/HandlerProcess";
+import { HandlerProcessEffect } from "./EventHandler/HandlerProcessEffect";
 import { IEvent } from "./IEvent";
 import { IServiceContext } from "./IServiceContext";
 
 interface IEventProcessing<Event extends IEvent = IEvent, ProcessResult = any, State = any> {
-  process: EventProcess<Event, ProcessResult, State>;
+  process: HandlerProcess<Event, ProcessResult, State>;
 }
 
 interface IEventProcessEffecting<Event extends IEvent = IEvent, ProcessResult = any, Resulting = any> {
-  processEffect: EventProcessEffect<Event, ProcessResult, Resulting>;
+  processEffect: HandlerProcessEffect<Event, ProcessResult, Resulting>;
 }
 
 export interface IEventHandler<Event extends IEvent = IEvent, ProcessResult = any, State = any, Resulting = any>

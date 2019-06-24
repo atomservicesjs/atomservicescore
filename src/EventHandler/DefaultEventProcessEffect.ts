@@ -1,4 +1,3 @@
-import { EventProcessEffect } from "./EventProcessEffect";
+import { HandlerProcessEffect } from "./HandlerProcessEffect";
 
-export const DefaultEventProcessEffect: EventProcessEffect =
-  async () => { };
+export const DefaultEventProcessEffect: HandlerProcessEffect = async () => { };

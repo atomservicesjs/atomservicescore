@@ -1,3 +1,3 @@
 export { DefaultEventProcessEffect } from "./DefaultEventProcessEffect";
-export { EventProcess } from "./EventProcess";
-export { EventProcessEffect } from "./EventProcessEffect";
+export { HandlerProcess } from "./HandlerProcess";
+export { HandlerProcessEffect } from "./HandlerProcessEffect";

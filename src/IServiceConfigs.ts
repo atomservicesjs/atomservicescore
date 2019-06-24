@@ -1,11 +1,14 @@
 import { StreamLevel } from "./EventStream/StreamLevel";
 
-export interface IServiceConfigs {
-  type: string;
+export interface IServiceLevelsConfigs {
   levels?: {
     _default: StreamLevel;
     [name: string]: StreamLevel;
   };
+}
+
+export interface IServiceConfigs extends IServiceLevelsConfigs {
+  type: string;
   subscribe?: {
     [type: string]: StreamLevel[];
   };
