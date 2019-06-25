@@ -7,4 +7,5 @@ export interface IService {
   type: () => string;
   configs: () => IServiceConfigs;
   dispatch: (command: ICommand) => Promise<DispatchResultType>;
+  connect: () => Promise<any>;
 }
