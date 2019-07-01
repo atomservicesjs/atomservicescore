@@ -1,6 +1,6 @@
 import { DispatchResultType } from "./common/DispatchResult";
+import { IServiceConfigs } from "./Configs/IServiceConfigs";
 import { ICommand } from "./ICommand";
-import { IServiceConfigs } from "./IServiceConfigs";
 
 export interface IService {
   scope: () => string;

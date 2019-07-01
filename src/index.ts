@@ -10,6 +10,11 @@ export {
   Reaction,
 };
 
+export {
+  IServiceConfigs,
+  IServiceLevelsConfigs,
+} from "./Configs";
+
 export { DispatchResult, IValidationResultType } from "./common";
 export { IAtomCommand } from "./IAtomCommand";
 export { IAtomEvent } from "./IAtomEvent";
@@ -22,7 +27,6 @@ export { IEventStream } from "./IEventStream";
 export { IIdentifier } from "./IIdentifier";
 export { IReaction } from "./IReaction";
 export { IService } from "./IService";
-export { IServiceConfigs, IServiceLevelsConfigs } from "./IServiceConfigs";
 export { IServiceContainer } from "./IServiceContainer";
 export { IServiceContext } from "./IServiceContext";
 export { IServiceEventStream } from "./IServiceEventStream";
