@@ -15,7 +15,12 @@ export {
   IServiceLevelsConfigs,
 } from "./Configs";
 
-export { DispatchResult, IValidationResultType } from "./common";
+export {
+  DispatchListening,
+  DispatchResult,
+  IValidationResultType,
+} from "./common";
+
 export { IAtomCommand } from "./IAtomCommand";
 export { IAtomEvent } from "./IAtomEvent";
 export { IAtomState } from "./IAtomState";
