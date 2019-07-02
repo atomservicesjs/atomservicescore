@@ -8,5 +8,5 @@ export interface IService {
   type: () => string;
   configs: () => IServiceConfigs;
   dispatch: (command: ICommand, listening?: DispatchListening) => Promise<DispatchResultType>;
-  connect: () => Promise<any>;
+  connect: () => Promise<void>;
 }
