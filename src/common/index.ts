@@ -4,5 +4,4 @@ export {
   DispatchResult,
 };
 
-export { DispatchListening } from "./DispatchListening";
 export { IValidationResultType } from "./IValidationResultType";

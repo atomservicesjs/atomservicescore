@@ -16,7 +16,6 @@ export {
 } from "./Configs";
 
 export {
-  DispatchListening,
   DispatchResult,
   IValidationResultType,
 } from "./common";
