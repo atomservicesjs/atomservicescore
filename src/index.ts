@@ -12,7 +12,7 @@ export {
 
 export {
   IServiceConfigs,
-  IServiceLevelsConfigs,
+  IServiceConfigsLevels,
 } from "./Configs";
 
 export {

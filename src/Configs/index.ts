@@ -1,2 +1,2 @@
 export { IServiceConfigs } from "./IServiceConfigs";
-export { IServiceLevelsConfigs } from "./IServiceLevelsConfigs";
+export { IServiceConfigsLevels } from "./IServiceConfigsLevels";
