@@ -7,12 +7,12 @@ interface IEventProcessing<Event extends IEvent = IEvent, ProcessResult = any, S
   process: HandlerProcess<Event, ProcessResult, State>;
 }
 
-interface IEventProcessEffecting<Event extends IEvent = IEvent, ProcessResult = any, Resulting = any> {
-  processEffect: HandlerProcessEffect<Event, ProcessResult, Resulting>;
+interface IEventProcessEffecting<Event extends IEvent = IEvent, ProcessResult = any> {
+  processEffect: HandlerProcessEffect<Event, ProcessResult>;
 }
 
-export interface IEventHandler<Event extends IEvent = IEvent, ProcessResult = any, State = any, Resulting = any>
-  extends IEventProcessing<Event, ProcessResult, State>, IEventProcessEffecting<Event, ProcessResult, Resulting> {
+export interface IEventHandler<Event extends IEvent = IEvent, ProcessResult = any, State = any>
+  extends IEventProcessing<Event, ProcessResult, State>, IEventProcessEffecting<Event, ProcessResult> {
   name: string;
   process: (event: Event, currentState: State) => Promise<ProcessResult>;
   processEffect: (
@@ -20,7 +20,7 @@ export interface IEventHandler<Event extends IEvent = IEvent, ProcessResult = an
       event: Event;
       result: ProcessResult;
     },
-    resulting: (event: Event, resulting: Resulting) => Promise<any>,
+    resulting: (result: any) => Promise<void>,
     context: IServiceContext,
   ) => Promise<void>;
 }
