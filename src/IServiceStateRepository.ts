@@ -1,3 +1,4 @@
+/*
 export interface IServiceStateRepository<State = any, AggregateID = string> {
   scope: () => string;
   type: () => string;
@@ -5,3 +6,4 @@ export interface IServiceStateRepository<State = any, AggregateID = string> {
   queryByAggregateID: (aggregateID: AggregateID) => Promise<State>;
   [key: string]: any;
 }
+*/

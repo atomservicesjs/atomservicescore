@@ -27,6 +27,7 @@ export { ICommand } from "./ICommand";
 export { ICommandHandler } from "./ICommandHandler";
 export { IEvent } from "./IEvent";
 export { IEventHandler } from "./IEventHandler";
+export { IEventStores } from "./IEventStores";
 export { IEventStream } from "./IEventStream";
 export { IIdentifier } from "./IIdentifier";
 export { IReaction } from "./IReaction";
@@ -35,7 +36,8 @@ export { IServiceContainer } from "./IServiceContainer";
 export { IServiceContext } from "./IServiceContext";
 export { IServiceEventStream } from "./IServiceEventStream";
 export { IServiceIdentifier } from "./IServiceIdentifier";
-export { IServiceStateRepository } from "./IServiceStateRepository";
 export { IServiceStreamLevel } from "./IServiceStreamLevel";
 export { IState } from "./IState";
-export { IStateRepositoryProvider } from "./IStateRepositoryProvider";
+
+// export { IServiceStateRepository } from "./IServiceStateRepository";
+// export { IStateRepositoryProvider } from "./IStateRepositoryProvider";
