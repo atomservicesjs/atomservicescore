@@ -6,8 +6,8 @@ export interface IEventStores<EventID = any, AggregateID = any> {
   queryCurrentVersion: (scope: string, type: string, aggregateID: AggregateID) =>
     Promise<{ type: string; aggregateID: AggregateID; version: number; }>;
   queryEventsByAggregateID: (
-    type: string,
     scope: string,
+    type: string,
     aggregateID: AggregateID,
     options?: {
       initialVersion?: number;
@@ -15,6 +15,8 @@ export interface IEventStores<EventID = any, AggregateID = any> {
     },
   ) => Promise<IEvent[]>;
   storeEvent: (scope: string, event: IEvent) =>
-    Promise<string>;
+    Promise<void>;
+  storeEvents: (scope: string, events: IEvent[]) =>
+    Promise<void>;
   [key: string]: any;
 }
