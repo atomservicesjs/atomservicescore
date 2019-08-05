@@ -38,6 +38,3 @@ export { IServiceEventStream } from "./IServiceEventStream";
 export { IServiceIdentifier } from "./IServiceIdentifier";
 export { IServiceStreamLevel } from "./IServiceStreamLevel";
 export { IState } from "./IState";
-
-// export { IServiceStateRepository } from "./IServiceStateRepository";
-// export { IStateRepositoryProvider } from "./IStateRepositoryProvider";

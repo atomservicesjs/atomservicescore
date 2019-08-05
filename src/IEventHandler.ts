@@ -1,5 +1,6 @@
 import { HandlerProcess } from "./EventHandler/HandlerProcess";
 import { HandlerProcessEffect } from "./EventHandler/HandlerProcessEffect";
+import { IStreamMetadata } from "./EventStream/IStreamMetadata";
 import { IEvent } from "./IEvent";
 import { IServiceContext } from "./IServiceContext";
 
@@ -14,7 +15,11 @@ interface IEventProcessEffecting<Event extends IEvent = IEvent, ProcessResult = 
 export interface IEventHandler<Event extends IEvent = IEvent, ProcessResult = any, State = any>
   extends IEventProcessing<Event, ProcessResult, State>, IEventProcessEffecting<Event, ProcessResult> {
   name: string;
-  process: (event: Event, currentState: State) => Promise<ProcessResult>;
+  process: (
+    event: Event,
+    currentState: State,
+    metadata: IStreamMetadata,
+  ) => Promise<ProcessResult>;
   processEffect: (
     process: {
       event: Event;
@@ -22,5 +27,6 @@ export interface IEventHandler<Event extends IEvent = IEvent, ProcessResult = an
     },
     resulting: (result: any) => Promise<void>,
     context: IServiceContext,
+    metadata: IStreamMetadata,
   ) => Promise<void>;
 }
