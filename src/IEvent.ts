@@ -5,5 +5,4 @@ export interface IEvent<EventID = any, AggregateID = any> {
   aggregateID: AggregateID;
   _version: number;
   _createdAt: Date;
-  [key: string]: any;
 }

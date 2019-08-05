@@ -1,15 +1,18 @@
-import {
-  EventLevel,
-  EventProcess,
-} from "./EventStreams";
+import { EventProcess } from "./EventStream/EventProcess";
+import { EventReact } from "./EventStream/EventReact";
+import { StreamLevel } from "./EventStream/StreamLevel";
 import { IEvent } from "./IEvent";
-import { IEventHandler } from "./IEventHandler";
-import { IReaction } from "./IReaction";
 
 export interface IServiceEventStream {
-  directTo: (ref: string, data: any) => Promise<void>;
-  listenTo: (ref: string, listener: (data: any) => void) => Promise<void>;
-  dispatch: (event: IEvent) => Promise<{ name: string; type: string; scope: string; level: EventLevel; }>;
-  registerHandler: (handler: IEventHandler, process: EventProcess) => Promise<{ name: string; type: string; scope: string; level: EventLevel; }>;
-  registerReaction: (reaction: IReaction, process: EventProcess) => Promise<{ name: string; type: string; scope: string; level: EventLevel; }>;
+  scope: () => string;
+  type: () => string;
+  dispatch: (
+    event: IEvent,
+    metadata?: {
+      isReplay: boolean;
+    }) => Promise<{ name: string; type: string; scope: string; level: StreamLevel; }>;
+  directTo: (ref: string, data: any) => Promise<any>;
+  listenTo: (ref: string, listener: (data: any) => void) => Promise<any>;
+  registerEventProcess: (on: { name: string; }, process: EventProcess) => Promise<{ name: string; type: string; scope: string; level: StreamLevel; }>;
+  registerEventReact: (on: { scope: string; type: string; name: string; }, react: EventReact) => Promise<{ name: string; type: string; scope: string; level: StreamLevel; }>;
 }

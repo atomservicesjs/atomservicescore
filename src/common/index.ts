@@ -1,4 +1,7 @@
-export { createLocalAck } from "./createLocalAck";
-export { hashify } from "./hashify";
+import * as DispatchResult from "./DispatchResult";
+
+export {
+  DispatchResult,
+};
+
 export { IValidationResultType } from "./IValidationResultType";
-export { reducize } from "./reducize";
