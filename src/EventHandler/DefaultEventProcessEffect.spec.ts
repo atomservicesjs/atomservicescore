@@ -16,10 +16,9 @@ describe("DefaultEventProcessEffect.ts tests", () => {
     const process: any = {};
     const resulting: any = {};
     const context: any = {};
-    const metadata: any = {};
 
     // acts
-    const result = await DefaultEventProcessEffect(process, resulting, context, metadata);
+    const result = await DefaultEventProcessEffect(process, resulting, context);
 
     // asserts
     expect(result).to.equal(undefined);

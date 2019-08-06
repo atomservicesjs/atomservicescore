@@ -1,9 +1,9 @@
 import { IEvent } from "../IEvent";
 import { IStreamMetadata } from "./IStreamMetadata";
 
-export type EventReact = (
-  event: IEvent,
+export type EventReact<Event extends IEvent = IEvent> = (
+  event: Event,
   scope: string,
-  processAck: () => Promise<void>,
   metadata: IStreamMetadata,
+  processAck: () => Promise<void>,
 ) => Promise<void>;

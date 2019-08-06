@@ -3,6 +3,6 @@ import { IStreamMetadata } from "./IStreamMetadata";
 
 export type EventProcess = (
   event: IEvent,
-  processAck: () => Promise<void>,
   metadata: IStreamMetadata,
+  processAck: () => Promise<void>,
 ) => Promise<void>;

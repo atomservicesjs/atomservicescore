@@ -6,8 +6,8 @@ export type HandlerProcessEffect<Event extends IEvent = IEvent, ProcessResult = 
   process: {
     event: Event;
     result: ProcessResult;
+    metadata: IStreamMetadata,
   },
   resulting: (result: any) => Promise<void>,
   context: IServiceContext,
-  metadata: IStreamMetadata,
 ) => Promise<void>;

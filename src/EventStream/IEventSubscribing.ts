@@ -5,15 +5,15 @@ import { StreamLevel } from "./StreamLevel";
 
 export interface IEventSubscribing {
   subscribe: (
-    on: { name: string; type: string; scope: string; level: StreamLevel; },
-    to: { channel: EventChannel; type: string; scope: string; },
+    on: { level: StreamLevel; name: string; scope: string; type: string; },
+    to: { channel: EventChannel; scope: string; type: string; },
     process: (
       event: IEvent,
-      processAck: () => Promise<void>,
       metadata: IStreamMetadata,
+      processAck: () => Promise<void>,
     ) => Promise<void>,
   ) => Promise<{
-    on: { name: string; type: string; scope: string; level: StreamLevel; };
-    to: { channel: EventChannel; type: string; scope: string; };
+    on: { level: StreamLevel; name: string; scope: string; type: string; };
+    to: { channel: EventChannel; scope: string; type: string; };
   }>;
 }
