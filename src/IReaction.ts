@@ -1,6 +1,6 @@
 import { IStreamMetadata } from "./Core/EventStream/IStreamMetadata";
 import { IEvent } from "./IEvent";
-import { IServiceContext } from "./IServiceContext";
+import { IServiceContext } from "./Service/IServiceContext";
 
 export interface IReaction<Event extends IEvent = IEvent> {
   scope: string;

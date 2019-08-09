@@ -1,6 +1,6 @@
-import { EventProcess, EventReact } from "./Core/EventStream";
-import { StreamLevel } from "./Core/EventStream/StreamLevel";
-import { IEvent } from "./IEvent";
+import { EventProcess, EventReact } from "../Core/EventStream";
+import { StreamLevel } from "../Core/EventStream/StreamLevel";
+import { IEvent } from "../IEvent";
 
 export interface IServiceContext<AggregateID = any, EventID = any> {
   scope: () => string;

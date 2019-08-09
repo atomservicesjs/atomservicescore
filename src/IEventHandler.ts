@@ -2,7 +2,7 @@ import { IStreamMetadata } from "./Core/EventStream/IStreamMetadata";
 import { HandlerProcess } from "./EventHandler/HandlerProcess";
 import { HandlerProcessEffect } from "./EventHandler/HandlerProcessEffect";
 import { IEvent } from "./IEvent";
-import { IServiceContext } from "./IServiceContext";
+import { IServiceContext } from "./Service/IServiceContext";
 
 interface IEventProcessing<Event extends IEvent = IEvent, ProcessResult = any, State = any> {
   process: HandlerProcess<Event, ProcessResult, State>;

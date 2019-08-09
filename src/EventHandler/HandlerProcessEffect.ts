@@ -1,6 +1,6 @@
 import { IStreamMetadata } from "../Core/EventStream/IStreamMetadata";
 import { IEvent } from "../IEvent";
-import { IServiceContext } from "../IServiceContext";
+import { IServiceContext } from "../Service/IServiceContext";
 
 export type HandlerProcessEffect<Event extends IEvent = IEvent, ProcessResult = any> = (
   process: {
