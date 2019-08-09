@@ -1,7 +1,8 @@
 import * as CommandHandler from "./CommandHandler";
 import * as EventHandler from "./EventHandler";
-import * as EventStream from "./EventStream";
+import * as EventStream from "./Core/EventStream";
 import * as Reaction from "./Reaction";
+export { IIdentifier } from "./Core/IIdentifier";
 
 export {
   CommandHandler,
@@ -27,9 +28,8 @@ export { ICommand } from "./ICommand";
 export { ICommandHandler } from "./ICommandHandler";
 export { IEvent } from "./IEvent";
 export { IEventHandler } from "./IEventHandler";
-export { IEventStores } from "./IEventStores";
-export { IEventStream } from "./IEventStream";
-export { IIdentifier } from "./IIdentifier";
+export { IEventStores } from "./Core/IEventStores";
+export { IEventStream } from "./Core/IEventStream";
 export { IReaction } from "./IReaction";
 export { IService } from "./IService";
 export { IServiceContainer } from "./IServiceContainer";

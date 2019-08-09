@@ -1,4 +1,4 @@
-import { IEvent } from "../IEvent";
+import { IEvent } from "../../IEvent";
 import { IStreamMetadata } from "./IStreamMetadata";
 
 export type EventProcess = (

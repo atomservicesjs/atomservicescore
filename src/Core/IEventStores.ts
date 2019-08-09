@@ -1,4 +1,4 @@
-import { IEvent } from "./IEvent";
+import { IEvent } from "../IEvent";
 
 export interface IEventStores<EventID = any, AggregateID = any> {
   queryByID: (scope: string, type: string, eventID: EventID) =>

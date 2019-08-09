@@ -1,4 +1,4 @@
-import { IStreamMetadata } from "../EventStream/IStreamMetadata";
+import { IStreamMetadata } from "../Core/EventStream/IStreamMetadata";
 import { IEvent } from "../IEvent";
 
 export type HandlerProcess<Event extends IEvent = IEvent, ProcessResult = any, State = any> =

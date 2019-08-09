@@ -1,4 +1,4 @@
-import { StreamLevel } from "../EventStream/StreamLevel";
+import { StreamLevel } from "../Core/EventStream/StreamLevel";
 
 export interface IServiceConfigsLevels {
   levels?: {
