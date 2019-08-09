@@ -1,13 +1,13 @@
 import * as CommandHandler from "./CommandHandler";
+import * as Core from "./Core";
 import * as EventHandler from "./EventHandler";
-import * as EventStream from "./Core/EventStream";
 import * as Reaction from "./Reaction";
 export { IIdentifier } from "./Core/IIdentifier";
 
 export {
   CommandHandler,
   EventHandler,
-  EventStream,
+  Core,
   Reaction,
 };
 
