@@ -1,4 +1,4 @@
-import { IStreamMetadata } from "../Core/EventStream";
+import { IStreamMetadata } from "../EventStream";
 import { IEvent } from "../IEvent";
 import { IServiceContext } from "../Service/IServiceContext";
 

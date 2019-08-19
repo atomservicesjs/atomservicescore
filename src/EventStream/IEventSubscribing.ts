@@ -1,4 +1,4 @@
-import { IEvent } from "../../IEvent";
+import { IEvent } from "../IEvent";
 import { EventChannel } from "./EventChannel";
 import { IStreamMetadata } from "./IStreamMetadata";
 import { StreamLevel } from "./StreamLevel";

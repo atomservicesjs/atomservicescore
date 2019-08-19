@@ -1,6 +1,6 @@
-import { IStreamMetadata } from "./Core/EventStream/IStreamMetadata";
 import { HandlerProcess } from "./EventHandler/HandlerProcess";
 import { HandlerProcessEffect } from "./EventHandler/HandlerProcessEffect";
+import { IStreamMetadata } from "./EventStream/IStreamMetadata";
 import { IEvent } from "./IEvent";
 import { IServiceContext } from "./Service/IServiceContext";
 

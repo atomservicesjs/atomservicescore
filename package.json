@@ -1,6 +1,6 @@
 {
   "name": "atomservicescore",
-  "version": "0.6.0-alpha.2",
+  "version": "0.6.0-alpha.4",
   "description": "Providing Core Library for AtomServices",
   "main": "./lib/index.js",
   "typings": "./typings/index.d.ts",
@@ -34,7 +34,7 @@
     "@types/chai": "^4.2.0",
     "@types/mocha": "^5.2.7",
     "@types/mock-require": "^2.0.0",
-    "@types/node": "^12.7.1",
+    "@types/node": "^12.7.2",
     "@types/sinon": "^7.0.13",
     "chai": "^4.2.0",
     "mocha": "^6.2.0",

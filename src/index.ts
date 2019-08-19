@@ -1,13 +1,13 @@
 import * as CommandHandler from "./CommandHandler";
-import * as Core from "./Core";
 import * as EventHandler from "./EventHandler";
+import * as EventStream from "./EventStream";
 import * as Reaction from "./Reaction";
 import * as Service from "./Service";
 
 export {
   CommandHandler,
   EventHandler,
-  Core,
+  EventStream,
   Reaction,
   Service,
 };
@@ -29,6 +29,9 @@ export { ICommand } from "./ICommand";
 export { ICommandHandler } from "./ICommandHandler";
 export { IEvent } from "./IEvent";
 export { IEventHandler } from "./IEventHandler";
+export { IEventStores } from "./IEventStores";
+export { IEventStream } from "./IEventStream";
+export { IIdentifier } from "./IIdentifier";
 export { IReaction } from "./IReaction";
 export { IService } from "./IService";
 export { IServiceContainer } from "./IServiceContainer";
