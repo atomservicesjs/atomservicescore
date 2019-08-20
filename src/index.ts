@@ -2,15 +2,18 @@ import * as CommandHandler from "./CommandHandler";
 import * as EventHandler from "./EventHandler";
 import * as EventStream from "./EventStream";
 import * as Reaction from "./Reaction";
-import * as Service from "./Service";
 
 export {
   CommandHandler,
   EventHandler,
   EventStream,
   Reaction,
-  Service,
 };
+
+export {
+  DispatchResult,
+  IValidationResultType,
+} from "./common";
 
 export {
   IServiceConfigs,
@@ -18,9 +21,10 @@ export {
 } from "./Configs";
 
 export {
-  DispatchResult,
-  IValidationResultType,
-} from "./common";
+  IServiceContext,
+  IServiceIdentifier,
+  IServiceStreamLevel,
+} from "./Service";
 
 export { IAtomCommand } from "./IAtomCommand";
 export { IAtomEvent } from "./IAtomEvent";
