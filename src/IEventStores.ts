@@ -1,7 +1,7 @@
 import { IEvent } from "./IEvent";
 
 export interface IEventStores<EventID = any, AggregateID = any> {
-  queryByID: (scope: string, type: string, eventID: EventID) =>
+  queryByEventID: (scope: string, type: string, eventID: EventID) =>
     Promise<IEvent> | Promise<undefined>;
   queryCurrentVersion: (scope: string, type: string, aggregateID: AggregateID) =>
     Promise<{ type: string; aggregateID: AggregateID; version: number; }>;

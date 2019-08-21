@@ -9,4 +9,5 @@ export interface IServiceContext<AggregateID = any, EventID = any> {
   dispatch: (event: IEvent) => Promise<{ level: StreamLevel; name: string; scope: string; type: string; }>;
   directTo: (ref: string, data: any) => Promise<any>;
   listenTo: (ref: string, listener: (data: any) => any) => Promise<any>;
+  queryCurrentVersion: (aggregateID: AggregateID) => Promise<{ type: string; aggregateID: AggregateID; version: number; }>;
 }
