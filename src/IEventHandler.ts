@@ -1,32 +1,12 @@
-import { HandlerProcess } from "./EventHandler/HandlerProcess";
-import { HandlerProcessEffect } from "./EventHandler/HandlerProcessEffect";
-import { IStreamMetadata } from "./EventStream/IStreamMetadata";
+import { AnyProcessResult } from "./EventHandler/AnyProcessResult";
+import { EventProcessEffectHandle } from "./EventHandler/EventProcessEffectHandle";
+import { EventProcessHandle } from "./EventHandler/EventProcessHandle";
 import { IEvent } from "./IEvent";
-import { IServiceContext } from "./Service/IServiceContext";
 
-interface IEventProcessing<Event extends IEvent = IEvent, ProcessResult = any, State = any> {
-  process: HandlerProcess<Event, ProcessResult, State>;
-}
+type AnyState = any;
 
-interface IEventProcessEffecting<Event extends IEvent = IEvent, ProcessResult = any> {
-  processEffect: HandlerProcessEffect<Event, ProcessResult>;
-}
-
-export interface IEventHandler<Event extends IEvent = IEvent, ProcessResult = any, State = any>
-  extends IEventProcessing<Event, ProcessResult, State>, IEventProcessEffecting<Event, ProcessResult> {
+export interface IEventHandler<Event extends IEvent = IEvent, ProcessResult = AnyProcessResult, State = AnyState> {
   name: string;
-  process: (
-    event: Event,
-    currentState: State,
-    metadata: IStreamMetadata,
-  ) => Promise<ProcessResult>;
-  processEffect: (
-    process: {
-      event: Event;
-      result: ProcessResult;
-      metadata: IStreamMetadata;
-    },
-    resulting: (result: any) => Promise<void>,
-    context: IServiceContext,
-  ) => Promise<void>;
+  process: EventProcessHandle<Event, ProcessResult, State>;
+  processEffect?: EventProcessEffectHandle<Event, ProcessResult>;
 }

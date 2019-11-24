@@ -1,12 +1,13 @@
 import { IStreamMetadata } from "../EventStream/IStreamMetadata";
 import { IEvent } from "../IEvent";
 import { IServiceContext } from "../Service/IServiceContext";
+import { AnyProcessResult } from "./AnyProcessResult";
 
-export type HandlerProcessEffect<Event extends IEvent = IEvent, ProcessResult = any> = (
+export type EventProcessEffectHandle<Event extends IEvent = IEvent, ProcessResult = AnyProcessResult> = (
   process: {
     event: Event;
     result: ProcessResult;
-    metadata: IStreamMetadata,
+    metadata: IStreamMetadata;
   },
   resulting: (result: any) => Promise<void>,
   context: IServiceContext,
