@@ -2,6 +2,5 @@
 import { IServiceConfigsLevels } from "./IServiceConfigsLevels";
 
 export interface IServiceConfigs extends IServiceConfigsLevels {
-  scope: string;
-  type: string;
+  scope?: string;
 }
