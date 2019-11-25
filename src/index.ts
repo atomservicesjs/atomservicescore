@@ -17,7 +17,6 @@ export {
 
 export {
   IServiceConfigs,
-  IServiceConfigsLevels,
   IServiceContainerConfigs,
 } from "./Configs";
 
