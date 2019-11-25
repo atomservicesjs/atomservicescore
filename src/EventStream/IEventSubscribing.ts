@@ -13,7 +13,7 @@ export interface IEventSubscribing {
       processAck: () => Promise<void>,
     ) => Promise<void>,
   ) => Promise<{
-    on: { level: StreamLevel; name: string; scope: string; type: string; };
+    on: { level: StreamLevel; scope: string; type: string; name: string; };
     to: { channel: EventChannel; scope: string; type: string; };
   }>;
 }
