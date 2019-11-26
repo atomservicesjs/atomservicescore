@@ -20,6 +20,7 @@ export {
 } from "./Configs";
 
 export {
+  IManagedService,
   IServiceConfigs,
   IServiceContext,
   IServiceDefinition,
