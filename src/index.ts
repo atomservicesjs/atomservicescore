@@ -16,12 +16,13 @@ export {
 } from "./common";
 
 export {
-  IServiceConfigs,
   IServiceContainerConfigs,
 } from "./Configs";
 
 export {
+  IServiceConfigs,
   IServiceContext,
+  IServiceDefinition,
   IServiceIdentifier,
   IServiceStreamLevel,
 } from "./Service";
