@@ -1,4 +1,3 @@
-export { IManagedService } from "./IManagedService";
 export { IServiceConfigs } from "./IServiceConfigs";
 export { IServiceContext } from "./IServiceContext";
 export { IServiceDefinition } from "./IServiceDefinition";

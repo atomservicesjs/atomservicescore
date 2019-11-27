@@ -1,11 +1,15 @@
-import { DispatchResultType } from "./common/DispatchResult";
-import { ICommand } from "./ICommand";
-import { IServiceContext } from "./Service/IServiceContext";
+import { IEventHandler } from "./IEventHandler";
+import { IEventStores } from "./IEventStores";
+import { IEventStream } from "./IEventStream";
+import { IIdentifier } from "./IIdentifier";
+import { IServiceConfigs } from "./Service/IServiceConfigs";
 
 export interface IService {
-  scope: () => string;
-  type: () => string;
-  dispatch: (command: ICommand, listening?: (data: any) => void) => Promise<DispatchResultType>;
-  connect: () => Promise<void>;
-  context: () => IServiceContext;
+  type: string;
+  scope?: string;
+  configs?: IServiceConfigs;
+  EventHandlers?: IEventHandler[];
+  EventStores?: IEventStores;
+  EventStream?: IEventStream;
+  Identifier?: IIdentifier;
 }
