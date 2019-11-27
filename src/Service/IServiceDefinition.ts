@@ -11,7 +11,7 @@ export interface IServiceDefinition {
   configs: IServiceConfigs;
   EventHandlers: IEventHandler[];
   EventStream: IEventStream;
-  Identifier: IServiceIdentifier;
-  StreamLevel: IServiceStreamLevel;
+  ServiceIdentifier: IServiceIdentifier;
+  ServiceStreamLevel: IServiceStreamLevel;
   EventStores?: IEventStores;
 }
