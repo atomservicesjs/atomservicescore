@@ -3,6 +3,7 @@ import { IEventStores } from "../IEventStores";
 import { IEventStream } from "../IEventStream";
 import { IServiceConfigs } from "./IServiceConfigs";
 import { IServiceIdentifier } from "./IServiceIdentifier";
+import { IServiceStreamLevel } from "./IServiceStreamLevel";
 
 export interface IServiceDefinition {
   type: string;
@@ -11,5 +12,6 @@ export interface IServiceDefinition {
   EventHandlers: IEventHandler[];
   EventStream: IEventStream;
   Identifier: IServiceIdentifier;
+  StreamLevel: IServiceStreamLevel;
   EventStores?: IEventStores;
 }
