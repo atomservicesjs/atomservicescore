@@ -4,8 +4,8 @@ import { StreamLevel } from "./StreamLevel";
 
 export interface IEventPublishing {
   publish: (
-    event: IEvent,
-    metadata: IStreamMetadata,
     on: { level: StreamLevel; scope: string; },
-  ) => Promise<{ level: StreamLevel; name: string; scope: string; type: string; }>;
+    metadata: IStreamMetadata,
+    event: IEvent,
+  ) => Promise<{ level: StreamLevel; scope: string; type: string; name: string; }>;
 }
