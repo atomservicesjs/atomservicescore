@@ -1,12 +1,11 @@
 import { IEvent } from "../IEvent";
 import { IStreamMetadata } from "./IStreamMetadata";
-import { StreamLevel } from "./StreamLevel";
 
-export interface IEventHandlersSubscribing {
+export interface IEventReactionsSubscribing {
   subscribe: (service: {
     scope: string;
     type: string;
-    handlers: Array<{ name: string; level: StreamLevel; }>;
+    reactions: Array<{ scope: string; type: string; name: string; }>;
     process: (
       event: IEvent,
       metadata: IStreamMetadata,
