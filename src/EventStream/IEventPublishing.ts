@@ -1,11 +1,11 @@
 import { IEvent } from "../IEvent";
 import { IStreamMetadata } from "./IStreamMetadata";
-import { StreamLevel } from "./StreamLevel";
+import { IStreamPublishOn } from "./IStreamPublishOn";
 
 export interface IEventPublishing {
   publish: (
-    on: { level: StreamLevel; scope: string; },
+    on: IStreamPublishOn,
     metadata: IStreamMetadata,
     event: IEvent,
-  ) => void;
+  ) => Promise<void>;
 }

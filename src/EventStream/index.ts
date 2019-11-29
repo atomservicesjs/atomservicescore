@@ -5,5 +5,6 @@ export { IEventSubscribing } from "./IEventSubscribing";
 export { IReactStreamProcesses } from "./IReactStreamProcesses";
 export { IServiceStreamDefinition } from "./IServiceStreamDefinition";
 export { IStreamMetadata } from "./IStreamMetadata";
+export { IStreamPublishOn } from "./IStreamPublishOn";
 export { StreamLevel } from "./StreamLevel";
 export { StreamProcessing } from "./StreamProcessing";
