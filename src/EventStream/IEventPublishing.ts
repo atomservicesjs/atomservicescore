@@ -7,5 +7,5 @@ export interface IEventPublishing {
     on: { level: StreamLevel; scope: string; },
     metadata: IStreamMetadata,
     event: IEvent,
-  ) => Promise<{ level: StreamLevel; scope: string; type: string; name: string; }>;
+  ) => void;
 }

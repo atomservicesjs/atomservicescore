@@ -1,19 +1,5 @@
-import { IEvent } from "../IEvent";
-import { EventChannel } from "./EventChannel";
-import { IStreamMetadata } from "./IStreamMetadata";
-import { StreamLevel } from "./StreamLevel";
+import { IServiceStreamDefinition } from "./IServiceStreamDefinition";
 
 export interface IEventSubscribing {
-  subscribe: (
-    on: { level: StreamLevel; scope: string; type: string; name: string; },
-    to: { channel: EventChannel; scope: string; type: string; },
-    process: (
-      event: IEvent,
-      metadata: IStreamMetadata,
-      processAck: () => Promise<void>,
-    ) => Promise<void>,
-  ) => Promise<{
-    on: { level: StreamLevel; scope: string; type: string; name: string; };
-    to: { channel: EventChannel; scope: string; type: string; };
-  }>;
+  subscribe: (definition: IServiceStreamDefinition) => void;
 }
