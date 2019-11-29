@@ -1,5 +1,5 @@
 import { IServiceStreamDefinition } from "./IServiceStreamDefinition";
 
 export interface IEventSubscribing {
-  subscribe: (definition: IServiceStreamDefinition) => void;
+  subscribe: (definition: IServiceStreamDefinition) => Promise<void>;
 }
