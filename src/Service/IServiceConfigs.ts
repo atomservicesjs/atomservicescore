@@ -1,8 +1,14 @@
 import { StreamLevel } from "../EventStream/StreamLevel";
 
 export interface IServiceConfigs {
-  levels?: {
-    _default: StreamLevel;
-    [name: string]: StreamLevel;
+  events?: {
+    [name: string]: {
+      handleProcess?: "asynchronous" | "synchronous";
+      level?: StreamLevel;
+    };
+    _default: {
+      handleProcess?: "asynchronous" | "synchronous";
+      level?: StreamLevel;
+    };
   };
 }
