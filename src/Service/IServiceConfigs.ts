@@ -6,8 +6,7 @@ export interface IServiceConfigs {
       handleProcess?: "asynchronous" | "synchronous";
       level?: StreamLevel;
     };
-    _default: {
-      handleProcess?: "asynchronous" | "synchronous";
+    __: {
       level?: StreamLevel;
     };
   };

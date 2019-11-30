@@ -1,6 +1,6 @@
-import { IReactStreamProcesses } from "./IReactStreamProcesses";
-import { StreamLevel } from "./StreamLevel";
-import { StreamProcessing } from "./StreamProcessing";
+import { IReactStreamProcesses } from "../EventStream/IReactStreamProcesses";
+import { StreamLevel } from "../EventStream/StreamLevel";
+import { StreamProcessing } from "../EventStream/StreamProcessing";
 
 export interface IServiceStreamDefinition {
   scope: string;
