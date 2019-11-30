@@ -20,12 +20,13 @@ export {
 } from "./Configs";
 
 export {
+  EventProcessType,
   IServiceConfigs,
   IServiceContext,
   IServiceDefinition,
   IServiceIdentifier,
   IServiceStreamDefinition,
-  IServiceStreamLevel,
+  IServiceStream,
 } from "./Service";
 
 export { IAtomCommand } from "./IAtomCommand";
