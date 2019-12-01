@@ -8,7 +8,7 @@ export interface IManagedService {
   dispatch: (command: ICommand, listening?: (data: any) => void) => Promise<DispatchResultType>;
   connect: () => Promise<void>;
   context: (
-    options: {
+    options?: {
       isReplay?: boolean;
     },
   ) => IServiceContext;
