@@ -11,7 +11,7 @@ export interface IServiceDefinition {
   type: string;
   scope: string;
   configs: IServiceConfigs;
-  CommandHandler: ICommandHandler[];
+  CommandHandlers: ICommandHandler[];
   EventHandlers: IEventHandler[];
   Reactions: IReaction[];
   EventStream: IEventStream;
