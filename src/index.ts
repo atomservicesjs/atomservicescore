@@ -25,8 +25,8 @@ export {
   IServiceContext,
   IServiceDefinition,
   IServiceIdentifier,
-  IServiceStreamDefinition,
   IServiceStream,
+  IServiceStreamDefinition,
 } from "./Service";
 
 export { IAtomCommand } from "./IAtomCommand";

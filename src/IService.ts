@@ -1,3 +1,4 @@
+import { ICommandHandler } from "./ICommandHandler";
 import { IEventHandler } from "./IEventHandler";
 import { IEventStores } from "./IEventStores";
 import { IEventStream } from "./IEventStream";
@@ -9,6 +10,7 @@ export interface IService {
   type: string;
   scope?: string;
   configs?: IServiceConfigs;
+  CommandHandlers?: ICommandHandler[];
   EventHandlers?: IEventHandler[];
   Reactions?: IReaction[];
   EventStores?: IEventStores;
