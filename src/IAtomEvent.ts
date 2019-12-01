@@ -4,7 +4,7 @@ export interface IAtomEvent<Payloads = any, EventID = any, AggregateID = any, Cr
   name: string;
   aggregateID: AggregateID;
   payloads: Payloads;
-  _version: number;
+  _version?: number;
   _createdAt: Date;
   _createdBy: CreatedBy;
 }
