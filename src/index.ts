@@ -16,12 +16,9 @@ export {
 } from "./common";
 
 export {
-  IServiceContainerConfigs,
-} from "./Configs";
-
-export {
   EventProcessType,
   IServiceConfigs,
+  IServiceContainerConfigs,
   IServiceContext,
   IServiceDefinition,
   IServiceIdentifier,

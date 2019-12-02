@@ -4,8 +4,9 @@ import { EventProcessType } from "./EventProcessType";
 export interface IServiceConfigs {
   events?: {
     [name: string]: {
-      processType?: EventProcessType;
+      allowNoVersion?: boolean;
       level?: StreamLevel;
+      processType?: EventProcessType;
     };
     __: {
       level?: StreamLevel;
