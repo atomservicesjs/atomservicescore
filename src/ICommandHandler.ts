@@ -5,7 +5,7 @@ import { IServiceIdentifier } from "./Service/IServiceIdentifier";
 
 export interface ICommandHandler<Command extends ICommand = ICommand, Event extends IEvent = IEvent> {
   name: string;
-  hook?: {
+  hook: {
     command?: (command: Command) => Promise<Command>;
     event?: (event: Event) => Promise<Event>;
   };
