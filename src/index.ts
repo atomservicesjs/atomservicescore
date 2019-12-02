@@ -18,7 +18,6 @@ export {
 export {
   EventProcessType,
   IServiceConfigs,
-  IServiceContainerConfigs,
   IServiceContext,
   IServiceDefinition,
   IServiceIdentifier,
@@ -37,6 +36,7 @@ export { IEventStores } from "./IEventStores";
 export { IEventStream } from "./IEventStream";
 export { IIdentifier } from "./IIdentifier";
 export { IManagedService } from "./IManagedService";
+export { IManagedServiceContainer } from "./IManagedServiceContainer";
 export { IReaction } from "./IReaction";
 export { IService } from "./IService";
 export { IServiceContainer } from "./IServiceContainer";
