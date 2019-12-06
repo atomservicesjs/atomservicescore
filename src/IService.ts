@@ -3,6 +3,7 @@ import { IEventHandler } from "./IEventHandler";
 import { IEventStores } from "./IEventStores";
 import { IEventStream } from "./IEventStream";
 import { IIdentifier } from "./IIdentifier";
+import { INotifier } from "./INotifier";
 import { IReaction } from "./IReaction";
 import { IServiceConfigs } from "./Service/IServiceConfigs";
 
@@ -16,4 +17,5 @@ export interface IService {
   EventStores?: IEventStores;
   EventStream?: IEventStream;
   Identifier?: IIdentifier;
+  INotifiers?: INotifier[];
 }

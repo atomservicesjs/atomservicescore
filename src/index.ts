@@ -37,6 +37,7 @@ export { IEventStream } from "./IEventStream";
 export { IIdentifier } from "./IIdentifier";
 export { IManagedService } from "./IManagedService";
 export { IManagedServiceContainer } from "./IManagedServiceContainer";
+export { INotifier } from "./INotifier";
 export { IReaction } from "./IReaction";
 export { IService } from "./IService";
 export { IServiceContainer } from "./IServiceContainer";
