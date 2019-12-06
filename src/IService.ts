@@ -17,5 +17,5 @@ export interface IService {
   EventStores?: IEventStores;
   EventStream?: IEventStream;
   Identifier?: IIdentifier;
-  INotifiers?: INotifier[];
+  Notifiers?: INotifier[];
 }
