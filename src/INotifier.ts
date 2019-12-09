@@ -1,3 +1,7 @@
+import { INotifyLog } from "./INotifyLog";
+import { INotifyObject } from "./INotifyObject";
+
 export interface INotifier {
-  on: (obj: any) => void;
+  log: (obj: INotifyLog) => void;
+  on: (obj: INotifyObject) => void;
 }
