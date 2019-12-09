@@ -1,9 +1,11 @@
-export interface INotifyObject<Fields = any>  {
+export interface INotifyObject {
   action: string;
   component: {
     type: string;
     name: string;
   };
-  fields: Fields;
+  fields: {
+    [field: string]: any;
+  };
   message: string;
 }
