@@ -7,7 +7,7 @@ export interface IServiceConfigs {
   };
   events?: {
     [name: string]: {
-      allowNoVersion?: boolean;
+      allowDynamicVersion?: boolean;
       level?: StreamLevel;
       processType?: EventProcessType;
     };
