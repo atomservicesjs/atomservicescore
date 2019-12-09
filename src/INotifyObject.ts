@@ -4,7 +4,7 @@ export interface INotifyObject {
     type: string;
     name: string;
   };
-  fields: {
+  fields?: {
     [field: string]: any;
   };
   message: string;
