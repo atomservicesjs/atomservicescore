@@ -1,13 +1,6 @@
-export type DispatchStatus = "accepted" | "error" | "invalid" | "unhandled";
+import { IAcceptDispatchRef } from "./IAcceptDispatchRef";
 
-export interface IAcceptDispatchRef {
-  _id: any;
-  type: string;
-  name: string;
-  aggregateID: any;
-  _version: number;
-  _createdAt: Date;
-}
+export type DispatchStatus = "accepted" | "error" | "invalid" | "unhandled";
 
 export interface IAcceptDispatchResult<Ref extends IAcceptDispatchRef = IAcceptDispatchRef> {
   accept: boolean;
@@ -20,6 +13,7 @@ export interface IErrorDispatchResult {
   status: "error";
   type: string;
   name: string;
+  error: any;
 }
 
 export interface IInvalidDispatchResult {
