@@ -1,4 +1,4 @@
-export type DispatchStatus = "accepted" | "invalid" | "unhandled";
+export type DispatchStatus = "accepted" | "error" | "invalid" | "unhandled";
 
 export interface IAcceptDispatchRef {
   _id: any;
@@ -11,24 +11,32 @@ export interface IAcceptDispatchRef {
 
 export interface IAcceptDispatchResult<Ref extends IAcceptDispatchRef = IAcceptDispatchRef> {
   accept: boolean;
-  status: DispatchStatus;
+  status: "accepted";
   ref: Ref;
+}
+
+export interface IErrorDispatchResult {
+  accept: boolean;
+  status: "error";
+  type: string;
+  name: string;
 }
 
 export interface IInvalidDispatchResult {
   accept: boolean;
-  status: DispatchStatus;
+  status: "invalid";
   invalidAttributes: any;
 }
 
 export interface IUnhandledDispatchResult {
   accept: boolean;
-  status: DispatchStatus;
+  status: "unhandled";
   type: string;
   name: string;
 }
 
 export type DispatchResultType =
   IAcceptDispatchResult |
+  IErrorDispatchResult |
   IInvalidDispatchResult |
   IUnhandledDispatchResult;
