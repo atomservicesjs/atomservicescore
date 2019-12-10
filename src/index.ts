@@ -18,10 +18,10 @@ export {
 export {
   EventProcessType,
   IServiceConfigs,
+  IServiceConfigurate,
   IServiceContext,
   IServiceDefinition,
   IServiceIdentifier,
-  IServiceStream,
   IServiceStreamDefinition,
 } from "./Service";
 

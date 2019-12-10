@@ -4,8 +4,8 @@ import { IEventStores } from "../IEventStores";
 import { IEventStream } from "../IEventStream";
 import { IReaction } from "../IReaction";
 import { IServiceConfigs } from "./IServiceConfigs";
+import { IServiceConfigurate } from "./IServiceConfigurate";
 import { IServiceIdentifier } from "./IServiceIdentifier";
-import { IServiceStream } from "./IServiceStream";
 
 export interface IServiceDefinition {
   type: string;
@@ -16,6 +16,6 @@ export interface IServiceDefinition {
   Reactions: IReaction[];
   EventStream: IEventStream;
   ServiceIdentifier: IServiceIdentifier;
-  ServiceStream: IServiceStream;
+  ServiceConfigurate: IServiceConfigurate;
   EventStores?: IEventStores;
 }
