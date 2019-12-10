@@ -7,8 +7,8 @@ export interface INotifyObject {
   fields?: {
     [field: string]: any;
   };
+  message: string;
   obj?: {
     [key: string]: any;
   };
-  message: string;
 }
