@@ -38,6 +38,8 @@ export { IIdentifier } from "./IIdentifier";
 export { IManagedService } from "./IManagedService";
 export { IManagedServiceContainer } from "./IManagedServiceContainer";
 export { INotifier } from "./INotifier";
+export { INotifiers } from "./INotifiers";
+export { INotifyData } from "./INotifyData";
 export { INotifyLog } from "./INotifyLog";
 export { INotifyObject } from "./INotifyObject";
 export { IReaction } from "./IReaction";

@@ -2,6 +2,7 @@ import { ICommandHandler } from "../ICommandHandler";
 import { IEventHandler } from "../IEventHandler";
 import { IEventStores } from "../IEventStores";
 import { IEventStream } from "../IEventStream";
+import { INotifiers } from "../INotifiers";
 import { IReaction } from "../IReaction";
 import { IServiceConfigs } from "./IServiceConfigs";
 import { IServiceConfigurate } from "./IServiceConfigurate";
@@ -14,8 +15,9 @@ export interface IServiceDefinition {
   CommandHandlers: ICommandHandler[];
   EventHandlers: IEventHandler[];
   Reactions: IReaction[];
-  EventStream: IEventStream;
-  ServiceConfigurate: IServiceConfigurate;
-  ServiceIdentifier: IServiceIdentifier;
   EventStores?: IEventStores;
+  EventStream: IEventStream;
+  ServiceIdentifier: IServiceIdentifier;
+  ServiceConfigurate: IServiceConfigurate;
+  Notifiers: INotifiers;
 }
