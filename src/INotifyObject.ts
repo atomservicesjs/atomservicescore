@@ -4,10 +4,11 @@ export interface INotifyObject {
     type: string;
     name: string;
   };
+  level: string;
+  message: string;
   fields?: {
     [field: string]: any;
   };
-  message: string;
   obj?: {
     [key: string]: any;
   };

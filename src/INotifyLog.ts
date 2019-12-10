@@ -4,8 +4,9 @@ export interface INotifyLog {
     type: string;
     name: string;
   };
+  level: string;
+  message: string;
   fields?: {
     [field: string]: any;
   };
-  message: string;
 }
