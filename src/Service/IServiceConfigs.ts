@@ -3,7 +3,9 @@ import { EventProcessType } from "./EventProcessType";
 
 export interface IServiceConfigs {
   service?: {
+    allowDynamicVersion?: boolean;
     level?: StreamLevel;
+    processType?: EventProcessType;
   };
   events?: {
     [name: string]: {
