@@ -1,7 +1,7 @@
 import { IEventStores } from "./IEventStores";
 
 export interface IStateStores<AggregateID = any> {
-  connect: (EventStores: IEventStores) =>
+  connect: (EventStores?: IEventStores) =>
     Promise<void>;
   queryByAggregateID: <State = any>(scope: string, type: string, aggregateID: AggregateID) =>
     Promise<State>;
