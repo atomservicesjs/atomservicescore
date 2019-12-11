@@ -22,6 +22,7 @@ export {
   IServiceContext,
   IServiceDefinition,
   IServiceIdentifier,
+  IServiceStateStores,
   IServiceStreamDefinition,
 } from "./Service";
 

@@ -17,9 +17,9 @@ export interface IServiceDefinition {
   EventHandlers: IEventHandler[];
   Reactions: IReaction[];
   EventStores?: IEventStores;
-  StateStores?: IServiceStateStores;
   EventStream: IEventStream;
   ServiceIdentifier: IServiceIdentifier;
   ServiceConfigurate: IServiceConfigurate;
+  ServiceStateStores?: IServiceStateStores;
   Notifiers: INotifiers;
 }
