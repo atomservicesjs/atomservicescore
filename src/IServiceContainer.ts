@@ -3,6 +3,7 @@ import { IEventStream } from "./IEventStream";
 import { IIdentifier } from "./IIdentifier";
 import { INotifier } from "./INotifier";
 import { IService } from "./IService";
+import { IStateStoresConnector } from "./IStateStoresConnector";
 
 export interface IServiceContainer {
   scope: string;
@@ -11,4 +12,5 @@ export interface IServiceContainer {
   EventStream?: IEventStream;
   Identifier?: IIdentifier;
   Notifiers?: INotifier[];
+  StateStores?: IStateStoresConnector;
 }

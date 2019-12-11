@@ -13,7 +13,15 @@ export interface IEventStores<EventID = any, AggregateID = any> {
       initialVersion?: number;
       limit?: number;
     },
-  ) => Promise<IEvent[]>;
+  ) => Promise<IEvent[] | any>;
+  queryEventsByDateTime: (
+    scope: string,
+    type: string,
+    options?: {
+      from?: Date;
+      to?: Date;
+    },
+  ) => Promise<IEvent[] | any>;
   storeEvent: (scope: string, event: IEvent) =>
     Promise<void>;
   storeEvents: (scope: string, events: IEvent[]) =>
