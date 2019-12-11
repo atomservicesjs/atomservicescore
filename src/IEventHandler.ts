@@ -7,6 +7,6 @@ import { IEvent } from "./IEvent";
 
 export interface IEventHandler<Event extends IAtomEvent = IEvent, ProcessResult = AnyProcessResult, State = AnyState> {
   name: string;
-  process: EventProcessHandle<Event, ProcessResult, State>;
+  process: EventProcessHandle<Event, ProcessResult>;
   processEffect?: EventProcessEffectHandle<Event, ProcessResult>;
 }
