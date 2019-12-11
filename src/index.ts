@@ -46,3 +46,5 @@ export { IReaction } from "./IReaction";
 export { IService } from "./IService";
 export { IServiceContainer } from "./IServiceContainer";
 export { IState } from "./IState";
+export { IStateStoresBridge } from "./IStateStoresBridge";
+export { IStateStoresConnector } from "./IStateStoresConnector";
