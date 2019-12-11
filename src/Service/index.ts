@@ -4,4 +4,6 @@ export { IServiceConfigurate } from "./IServiceConfigurate";
 export { IServiceContext } from "./IServiceContext";
 export { IServiceDefinition } from "./IServiceDefinition";
 export { IServiceIdentifier } from "./IServiceIdentifier";
+export { IServiceNotifyData } from "./IServiceNotifyData";
+export { IServiceStateStores } from "./IServiceStateStores";
 export { IServiceStreamDefinition } from "./IServiceStreamDefinition";

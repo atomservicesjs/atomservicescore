@@ -1,4 +1,4 @@
-export interface IServiceStateStoresBridge<AggregateID = any> {
+export interface IServiceStateStores<AggregateID = any> {
   queryByAggregateID: <State = any>(aggregateID: AggregateID) =>
     Promise<State>;
   queryCurrentVersion: (aggregateID: AggregateID) =>
