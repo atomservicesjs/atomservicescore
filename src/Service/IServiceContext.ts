@@ -6,7 +6,7 @@ export interface IServiceContext<AggregateID = any, EventID = any> {
   type: () => string;
   AggregateID: () => AggregateID;
   EventID: () => EventID;
-  dispatch: (event: IEvent) => Promise<void>;
+  dispatch: (event: IEvent) => Promise<{ id: any; version: number; }>;
   directTo: (ref: string, data: any) => Promise<void>;
   listenTo: (ref: string, listener: (data: any) => any) => Promise<void>;
   queryCurrentVersion: (aggregateID: AggregateID) => Promise<{ type: string; aggregateID: AggregateID; version: number; }>;
