@@ -1,3 +1,4 @@
+import { IEvent } from "./IEvent";
 import { IServiceDefinition } from "./Service/IServiceDefinition";
 
 export interface IStateStores<AggregateID = any> {
@@ -7,6 +8,6 @@ export interface IStateStores<AggregateID = any> {
     Promise<State>;
   queryCurrentVersion: (scope: string, type: string, aggregateID: AggregateID) =>
     Promise<{ scope: string; type: string; aggregateID: AggregateID; version: number; }>;
-  applyEvents: (scope: string, type: string, events: Event[]) =>
+  applyEvents: (scope: string, type: string, events: IEvent[]) =>
     Promise<void>;
 }
