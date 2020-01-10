@@ -5,8 +5,8 @@ import { IStreamPublishOn } from "./IStreamPublishOn";
 export interface IEventPublishing {
   connect: () => Promise<void>;
   publish: (
-    on: IStreamPublishOn,
-    metadata: IStreamMetadata,
     event: IEvent,
+    metadata: IStreamMetadata,
+    on: IStreamPublishOn,
   ) => Promise<void>;
 }
