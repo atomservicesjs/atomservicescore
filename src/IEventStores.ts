@@ -14,7 +14,7 @@ export interface IEventStores<EventID = any, AggregateID = any> {
       initialVersion?: number;
       limit?: number;
     },
-  ) => IEventStoresCursor;
+  ) => Promise<IEventStoresCursor>;
   queryEventsByDateTime: (
     scope: string,
     type: string,
@@ -22,7 +22,7 @@ export interface IEventStores<EventID = any, AggregateID = any> {
       from?: Date;
       to?: Date;
     },
-  ) => IEventStoresCursor;
+  ) => Promise<IEventStoresCursor>;
   storeEvent: (scope: string, event: IEvent) =>
     Promise<void>;
   storeEvents: (scope: string, events: IEvent[]) =>
