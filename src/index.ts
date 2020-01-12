@@ -34,6 +34,7 @@ export { ICommandHandler } from "./ICommandHandler";
 export { IEvent } from "./IEvent";
 export { IEventHandler } from "./IEventHandler";
 export { IEventStores } from "./IEventStores";
+export { IEventStoresCursor } from "./IEventStoresCursor";
 export { IEventStream } from "./IEventStream";
 export { IIdentifier } from "./IIdentifier";
 export { IManagedService } from "./IManagedService";
