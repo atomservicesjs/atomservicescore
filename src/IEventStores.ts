@@ -1,4 +1,5 @@
 import { IEvent } from "./IEvent";
+import { IEventStoresCursor } from "./IEventStoresCursor";
 
 export interface IEventStores<EventID = any, AggregateID = any> {
   queryByEventID: (scope: string, type: string, eventID: EventID) =>
@@ -13,7 +14,7 @@ export interface IEventStores<EventID = any, AggregateID = any> {
       initialVersion?: number;
       limit?: number;
     },
-  ) => Promise<IEvent[] | any>;
+  ) => IEventStoresCursor;
   queryEventsByDateTime: (
     scope: string,
     type: string,
@@ -21,7 +22,7 @@ export interface IEventStores<EventID = any, AggregateID = any> {
       from?: Date;
       to?: Date;
     },
-  ) => Promise<IEvent[] | any>;
+  ) => IEventStoresCursor;
   storeEvent: (scope: string, event: IEvent) =>
     Promise<void>;
   storeEvents: (scope: string, events: IEvent[]) =>
