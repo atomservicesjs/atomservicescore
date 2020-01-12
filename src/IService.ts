@@ -5,7 +5,7 @@ import { IEventStream } from "./IEventStream";
 import { IIdentifier } from "./IIdentifier";
 import { INotifier } from "./INotifier";
 import { IReaction } from "./IReaction";
-import { IStateStores } from "./IStateStores";
+import { IStateHandler } from "./IStateHandler";
 import { IServiceConfigs } from "./Service/IServiceConfigs";
 
 export interface IService {
@@ -14,9 +14,9 @@ export interface IService {
   configs?: IServiceConfigs;
   CommandHandlers?: ICommandHandler[];
   EventHandlers?: IEventHandler[];
+  StateHandlers?: IStateHandler[];
   Reactions?: IReaction[];
   EventStores?: IEventStores;
-  StateStores?: IStateStores;
   EventStream?: IEventStream;
   Identifier?: IIdentifier;
   Notifiers?: INotifier[];
