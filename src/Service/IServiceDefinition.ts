@@ -4,10 +4,10 @@ import { IEventStores } from "../IEventStores";
 import { IEventStream } from "../IEventStream";
 import { INotifiers } from "../INotifiers";
 import { IReaction } from "../IReaction";
+import { IStateHandler } from "../IStateHandler";
 import { IServiceConfigs } from "./IServiceConfigs";
 import { IServiceConfigurate } from "./IServiceConfigurate";
 import { IServiceIdentifier } from "./IServiceIdentifier";
-import { IServiceStateStores } from "./IServiceStateStores";
 
 export interface IServiceDefinition {
   type: string;
@@ -15,11 +15,11 @@ export interface IServiceDefinition {
   configs: IServiceConfigs;
   CommandHandlers: ICommandHandler[];
   EventHandlers: IEventHandler[];
+  StateHandlers: IStateHandler[];
   Reactions: IReaction[];
   EventStores?: IEventStores;
   EventStream: IEventStream;
   ServiceIdentifier: IServiceIdentifier;
   ServiceConfigurate: IServiceConfigurate;
-  ServiceStateStores?: IServiceStateStores;
   Notifiers: INotifiers;
 }
