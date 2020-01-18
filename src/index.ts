@@ -49,4 +49,5 @@ export { IReaction } from "./IReaction";
 export { IService } from "./IService";
 export { IServiceContainer } from "./IServiceContainer";
 export { IState } from "./IState";
+export { IStateApplier } from "./IStateApplier";
 export { IStateHandler } from "./IStateHandler";
