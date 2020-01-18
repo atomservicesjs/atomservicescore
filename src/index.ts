@@ -2,12 +2,14 @@ import * as CommandHandler from "./CommandHandler";
 import * as EventHandler from "./EventHandler";
 import * as EventStream from "./EventStream";
 import * as Reaction from "./Reaction";
+import * as StateHandler from "./StateHandler";
 
 export {
   CommandHandler,
   EventHandler,
   EventStream,
   Reaction,
+  StateHandler,
 };
 
 export {
@@ -49,4 +51,3 @@ export { IService } from "./IService";
 export { IServiceContainer } from "./IServiceContainer";
 export { IState } from "./IState";
 export { IStateHandler } from "./IStateHandler";
-export { IStateStores } from "./IStateStores";

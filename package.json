@@ -1,6 +1,6 @@
 {
   "name": "atomservicescore",
-  "version": "0.7.0-alpha.91",
+  "version": "0.7.0-alpha.93",
   "description": "Core Library Providing Definitions and Interfaces",
   "main": "./lib/index.js",
   "typings": "./typings/index.d.ts",
