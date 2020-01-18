@@ -1,8 +1,8 @@
 import { IStreamMetadata } from "../EventStream/IStreamMetadata";
 import { IAtomEvent } from "../IAtomEvent";
 import { IEvent } from "../IEvent";
-import { IServiceStateStores } from "../Service/IServiceStateStores";
+import { IStateApplier } from "../IStateApplier";
 import { AnyProcessResult } from "./AnyProcessResult";
 
 export type EventProcessHandle<Event extends IAtomEvent = IEvent, ProcessResult = AnyProcessResult> =
-  (event: Event, metadata: IStreamMetadata, StateStores: IServiceStateStores) => Promise<ProcessResult>;
+  (event: Event, metadata: IStreamMetadata, State: IStateApplier) => Promise<ProcessResult>;
