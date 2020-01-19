@@ -29,6 +29,16 @@ export interface IUnhandledDispatchResult {
   name: string;
 }
 
+export interface IDispatchResult<Ref extends IAcceptDispatchRef = IAcceptDispatchRef> {
+  accept: boolean;
+  status: "accepted" | "error" | "invalid" | "unhandled";
+  ref?: Ref;
+  type?: string;
+  name?: string;
+  error?: any;
+  invalidAttributes?: any;
+}
+
 export type DispatchResultType =
   IAcceptDispatchResult |
   IErrorDispatchResult |
