@@ -38,9 +38,3 @@ export interface IDispatchResult<Ref extends IAcceptDispatchRef = IAcceptDispatc
   error?: any;
   invalidAttributes?: any;
 }
-
-export type DispatchResultType =
-  IAcceptDispatchResult |
-  IErrorDispatchResult |
-  IInvalidDispatchResult |
-  IUnhandledDispatchResult;
