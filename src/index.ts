@@ -49,5 +49,8 @@ export { IReaction } from "./IReaction";
 export { IService } from "./IService";
 export { IServiceContainer } from "./IServiceContainer";
 export { IState } from "./IState";
+export { IStateAccess } from "./IStateAccess";
+export { IStateAccessConnect } from "./IStateAccessConnect";
+export { IStateAccessCursor } from "./IStateAccessCursor";
 export { IStateApplier } from "./IStateApplier";
 export { IStateHandler } from "./IStateHandler";

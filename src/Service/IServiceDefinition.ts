@@ -4,6 +4,7 @@ import { IEventStores } from "../IEventStores";
 import { IEventStream } from "../IEventStream";
 import { INotifiers } from "../INotifiers";
 import { IReaction } from "../IReaction";
+import { IStateAccessConnect } from "../IStateAccessConnect";
 import { IStateHandler } from "../IStateHandler";
 import { IServiceConfigs } from "./IServiceConfigs";
 import { IServiceConfigurate } from "./IServiceConfigurate";
@@ -22,4 +23,5 @@ export interface IServiceDefinition {
   ServiceIdentifier: IServiceIdentifier;
   ServiceConfigurate: IServiceConfigurate;
   Notifiers: INotifiers;
+  StateAccessConnect?: IStateAccessConnect;
 }
