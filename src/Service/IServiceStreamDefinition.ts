@@ -6,11 +6,11 @@ export interface IServiceStreamDefinition {
   scope: string;
   type: string;
   handlers: {
-    events: Array<{ name: string; level: StreamLevel; }>;
+    events: { name: string; level: StreamLevel; }[];
     processing: StreamProcessing;
   };
   reactions: {
-    events: Array<{ scope: string; type: string; name: string; }>;
+    events: { scope: string; type: string; name: string; }[];
     processes: IReactStreamProcesses;
   };
 }
