@@ -1,0 +1,1 @@
+export type AnyProcessResult = any;

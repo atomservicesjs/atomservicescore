@@ -1,8 +1,4 @@
-export interface IAtomState<StateID = any, CreatedBy = any, UpdatedBy = any> {
+export interface IAtomState<StateID = any> {
   _id: StateID;
   _version: number;
-  _createdAt: Date;
-  _createdBy: CreatedBy;
-  _updatedAt: Date;
-  _updatedBy: UpdatedBy;
 }
