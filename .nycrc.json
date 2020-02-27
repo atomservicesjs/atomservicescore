@@ -10,7 +10,6 @@
   ],
   "exclude": [
     "_scripts/**",
-    "src/**/index.ts",
     "src/**/*.spec.ts"
   ],
   "require": [
