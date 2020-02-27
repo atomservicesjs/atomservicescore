@@ -1,6 +1,3 @@
-export interface IAtomCommand<Payloads = any, CreatedBy = any> {
+export interface IAtomCommand {
   name: string;
-  payloads: Payloads;
-  _version: number;
-  _createdBy: CreatedBy;
 }

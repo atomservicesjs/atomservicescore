@@ -1,34 +1,40 @@
-export type DispatchStatus = "accepted" | "invalid" | "unhandled";
+import { IAcceptDispatchRef } from "./IAcceptDispatchRef";
 
-export interface IAcceptDispatchRef {
-  _id: any;
-  type: string;
-  name: string;
-  aggregateID: any;
-  _version: number;
-  _createdAt: Date;
-}
+export type DispatchStatus = "accepted" | "error" | "invalid" | "unhandled";
 
 export interface IAcceptDispatchResult<Ref extends IAcceptDispatchRef = IAcceptDispatchRef> {
   accept: boolean;
-  status: DispatchStatus;
+  status: "accepted";
   ref: Ref;
+}
+
+export interface IErrorDispatchResult {
+  accept: boolean;
+  status: "error";
+  type: string;
+  name: string;
+  error: any;
 }
 
 export interface IInvalidDispatchResult {
   accept: boolean;
-  status: DispatchStatus;
+  status: "invalid";
   invalidAttributes: any;
 }
 
 export interface IUnhandledDispatchResult {
   accept: boolean;
-  status: DispatchStatus;
+  status: "unhandled";
   type: string;
   name: string;
 }
 
-export type DispatchResultType =
-  IAcceptDispatchResult |
-  IInvalidDispatchResult |
-  IUnhandledDispatchResult;
+export interface IDispatchResult<Ref extends IAcceptDispatchRef = IAcceptDispatchRef> {
+  accept: boolean;
+  status: "accepted" | "error" | "invalid" | "unhandled";
+  ref?: Ref;
+  type?: string;
+  name?: string;
+  error?: any;
+  invalidAttributes?: any;
+}

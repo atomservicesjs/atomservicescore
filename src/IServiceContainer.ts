@@ -1,8 +1,16 @@
+import { IEventStores } from "./IEventStores";
+import { IEventStream } from "./IEventStream";
+import { IIdentifier } from "./IIdentifier";
+import { INotifier } from "./INotifier";
 import { IService } from "./IService";
+import { IStateAccessConnect } from "./IStateAccessConnect";
 
 export interface IServiceContainer {
-  connect: () => Promise<void>;
-  readonly isConnected: boolean;
-  registerService: (service: IService) => Promise<IService>;
-  scope: () => string;
+  scope: string;
+  Services: IService[];
+  EventStores?: IEventStores;
+  EventStream?: IEventStream;
+  Identifier?: IIdentifier;
+  StateAccessConnect?: IStateAccessConnect;
+  Notifiers?: INotifier[];
 }

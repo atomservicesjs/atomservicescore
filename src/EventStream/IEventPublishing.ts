@@ -1,12 +1,12 @@
 import { IEvent } from "../IEvent";
-import { StreamLevel } from "./StreamLevel";
+import { IStreamMetadata } from "./IStreamMetadata";
+import { IStreamPublishOn } from "./IStreamPublishOn";
 
 export interface IEventPublishing {
-  publish: (
-    event: IEvent,
-    on: { scope: string; level: StreamLevel; },
-    metadata?: {
-      isReplay: boolean;
-    }) =>
-    Promise<{ name: string; type: string; scope: string; level: StreamLevel; }>;
+  connect: () => Promise<void>;
+  publish: (props: {
+    event: IEvent;
+    metadata: IStreamMetadata;
+    on: IStreamPublishOn;
+  }) => Promise<void>;
 }
