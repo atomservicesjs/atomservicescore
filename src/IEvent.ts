@@ -4,7 +4,7 @@ export interface IEvent<Payloads = any, EventID = any, AggregateID = any, Create
   name: string;
   aggregateID: AggregateID;
   payloads: Payloads;
-  _version: number;
   _createdAt: Date;
   _createdBy: CreatedBy;
+  _version?: number;
 }
