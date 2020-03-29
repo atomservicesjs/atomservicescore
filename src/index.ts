@@ -19,11 +19,13 @@ export {
 
 export {
   EventProcessType,
+  EventVersioning,
   IServiceConfigs,
   IServiceConfigurate,
   IServiceContext,
   IServiceDefinition,
   IServiceIdentifier,
+  IServiceNotifyData,
   IServiceStreamDefinition,
 } from "./Service";
 

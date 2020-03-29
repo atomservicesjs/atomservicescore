@@ -1,4 +1,5 @@
 export { EventProcessType } from "./EventProcessType";
+export { EventVersioning } from "./EventVersioning";
 export { IServiceConfigs } from "./IServiceConfigs";
 export { IServiceConfigurate } from "./IServiceConfigurate";
 export { IServiceContext } from "./IServiceContext";
