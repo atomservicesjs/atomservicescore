@@ -3,6 +3,6 @@ export interface IAcceptDispatchRef {
   type: string;
   name: string;
   aggregateID: any;
-  _version: number;
   _createdAt: Date;
+  _version: number | undefined;
 }
