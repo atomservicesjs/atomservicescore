@@ -11,4 +11,6 @@ export interface IManagedServiceContainer {
     Promise<IDispatchResult>;
   service: (type: string) =>
     IManagedService;
+  scope: () =>
+    string;
 }
