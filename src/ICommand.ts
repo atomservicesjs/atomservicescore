@@ -3,4 +3,5 @@ export interface ICommand<Payloads = any, CreatedBy = any> {
   payloads: Payloads;
   _createdBy: CreatedBy;
   _version?: number;
+  [key: string]: any;
 }
