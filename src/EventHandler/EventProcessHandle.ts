@@ -5,4 +5,4 @@ import { IStateApplier } from "../IStateApplier";
 import { AnyProcessResult } from "./AnyProcessResult";
 
 export type EventProcessHandle<Event extends IAtomEvent = IEvent, ProcessResult = AnyProcessResult> =
-  (event: Event, metadata: IStreamMetadata, StateApplier: IStateApplier) => Promise<ProcessResult>;
+  (event: Event, metadata: IStreamMetadata, StateApplier: IStateApplier<Event>) => Promise<ProcessResult>;
