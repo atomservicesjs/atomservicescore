@@ -1,4 +1,4 @@
-export interface IEvent<Payloads = any, EventID = any, AggregateID = any, CreatedBy = any> {
+export interface IEventWithoutVersioning<Payloads = any, EventID = any, AggregateID = any, CreatedBy = any> {
   _id: EventID;
   type: string;
   name: string;
@@ -6,6 +6,5 @@ export interface IEvent<Payloads = any, EventID = any, AggregateID = any, Create
   payloads: Payloads;
   _createdAt: Date;
   _createdBy: CreatedBy;
-  _version: number | undefined;
   [key: string]: any;
 }
