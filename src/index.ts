@@ -1,16 +1,8 @@
-import * as CommandHandler from "./CommandHandler";
-import * as EventHandler from "./EventHandler";
-import * as EventStream from "./EventStream";
-import * as Reaction from "./Reaction";
-import * as StateHandler from "./StateHandler";
-
-export {
-  CommandHandler,
-  EventHandler,
-  EventStream,
-  Reaction,
-  StateHandler,
-};
+export * as CommandHandler from "./CommandHandler";
+export * as EventHandler from "./EventHandler";
+export * as EventStream from "./EventStream";
+export * as Reaction from "./Reaction";
+export * as StateHandler from "./StateHandler";
 
 export {
   DispatchResult,
