@@ -4,7 +4,7 @@ import { IEvent } from "./IEvent";
 import { IEventHandler } from "./IEventHandler";
 
 export interface ISFComponents<Event extends IEvent = IEvent, Command extends ICommand = ICommand<Event["payloads"], Event["_createdBy"]>, ProcessResult = any> {
-  Commander: <Props = {
+  Commander: <Props extends {
     [prop in keyof Command["payloads"]]: Command["payloads"][prop];
   } & {
     aggregateID?: Event["aggregateID"];
