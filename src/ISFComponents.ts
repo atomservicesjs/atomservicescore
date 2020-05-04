@@ -5,11 +5,11 @@ import { IEventHandler } from "./IEventHandler";
 
 export interface ISFComponents<Event extends IEvent = IEvent, Command extends ICommand = ICommand<Event["payloads"], Event["_createdBy"]>, ProcessResult = any> {
   Commander: (props: {
-    [prop in keyof Event["payloads"]]: Event["payloads"][prop];
+    [prop in keyof Command["payloads"]]: Command["payloads"][prop];
   } & {
     aggregateID?: Event["aggregateID"];
-    _createdBy?: Event["_createdBy"];
-    _version?: Event["_version"];
+    _createdBy?: Command["_createdBy"];
+    _version?: Command["_version"];
     [key: string]: any;
   }) => Command;
   CommandHandler: ICommandHandler<Command, Event>;
