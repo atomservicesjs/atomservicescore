@@ -1,8 +1,11 @@
+import { StreamLevel } from "./EventStream/StreamLevel";
 import { ICommand } from "./ICommand";
 import { ICommandHandler } from "./ICommandHandler";
 import { IEvent } from "./IEvent";
 import { IEventHandler } from "./IEventHandler";
 import { IStateHandler } from "./IStateHandler";
+import { EventProcessType } from "./Service/EventProcessType";
+import { EventVersioning } from "./Service/EventVersioning";
 
 export interface ISFComponents<Event extends IEvent = IEvent, Command extends ICommand = ICommand<Event["payloads"], Event["_createdBy"]>, ProcessResult = any> {
   Commander: (props: {
@@ -16,4 +19,9 @@ export interface ISFComponents<Event extends IEvent = IEvent, Command extends IC
   CommandHandler: ICommandHandler<Command, Event>;
   EventHandler: IEventHandler<Event, ProcessResult>;
   StateHandler: IStateHandler<Event>;
+  Configs: {
+    level?: StreamLevel;
+    processType?: EventProcessType;
+    versioning?: EventVersioning;
+  };
 };
