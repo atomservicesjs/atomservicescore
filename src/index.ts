@@ -44,6 +44,7 @@ export { INotifyObject } from "./INotifyObject";
 export { IReaction } from "./IReaction";
 export { IService } from "./IService";
 export { IServiceContainer } from "./IServiceContainer";
+export { ISFComponents } from "./ISFComponents";
 export { IState } from "./IState";
 export { IStateAccess } from "./IStateAccess";
 export { IStateAccessConnect } from "./IStateAccessConnect";
