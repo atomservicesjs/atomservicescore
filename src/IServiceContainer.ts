@@ -7,7 +7,9 @@ import { IStateAccessConnect } from "./IStateAccessConnect";
 
 export interface IServiceContainer {
   scope: string;
-  Services: IService[];
+  Services: {
+    [type: string]: IService;
+  };
   EventStores?: IEventStores;
   EventStream?: IEventStream;
   Identifier?: IIdentifier;
