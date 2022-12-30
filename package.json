@@ -30,6 +30,6 @@
   "repository": "git+https://github.com/atomservicesjs/atomservicescore",
   "dependencies": {},
   "devDependencies": {
-    "archdevts": "20.4.1"
+    "archdevts": "20.12.19"
   }
 }
